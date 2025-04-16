@@ -1,8 +1,8 @@
 # EftelTimes
 
-Unofficial fan-made queue times application for the Efteling theme park. Built with React and Django.
+Queue times application for the Efteling theme park. Built with React and Django.
 
-*This is not affiliated with, endorsed, or sponsored by the Efteling theme park.*
+A fan-made project, not affiliated with the Efteling.
 
 ## Features
 
@@ -86,12 +86,48 @@ DEBUG=True
 USE_DUMMY_DATA=True  # Set to False for real API
 ```
 
-## FUTURE Features
+## Roadmap
 
-- [ ] User-controlled sorting of attractions
-- [ ] Show schedules for entertainment
-- [ ] Historical wait time data
-- [ ] Push notifications for status changes
+### ✅ Phase 1: Project Foundation
+- [x] Folder structure created: `/frontend` and `/backend`
+- [x] Vite + React frontend scaffolded
+- [x] Django backend scaffolded using Pipenv
+- [x] TailwindCSS and styled-components set up
+- [x] Redux Toolkit and React Router configured
+- [x] Django REST Framework and CORS configured
+- [x] File-based caching set up in Django
+
+### 🎨 Phase 2: UI & Component Architecture
+- [x] Project folders organized (`components/`, `layouts/`, `pages/`, `store/`, etc.)
+- [x] Build reusable UI components (Row component with status/times display)
+- [x] Create layout components (HomePage container)
+- [x] Style and structure UI using mock data
+- [ ] Build additional UI components (cards, tags, display elements)
+- [ ] Ensure mobile responsiveness and visual polish
+
+### 🔌 Phase 3: API Integration
+- [x] Switch from Python wrapper to direct ThemeParks API usage
+- [x] Set up `/api/v1/queues/` endpoint
+- [x] Extract: name, status, wait times, area, type, translations
+- [x] Include `last_updated` timestamp
+- [x] Cache backend response for 60 seconds
+- [x] Connect frontend to live data using RTK Query
+- [x] Transform API data for frontend consumption
+
+### 🧠 Phase 4: UX & State Features
+- [ ] Add toggle for grouping by area
+- [ ] Default: **grouped on desktop**, **flat on mobile**
+- [ ] Implement global state for queue data
+- [ ] Add loading and error handling
+- [ ] Optional: search/filter, dark mode
+
+### 🚀 Phase 5: Final Touches & Deployment
+- [ ] Add favicon and page title
+- [ ] Add legal/fan disclaimer in the footer
+- [ ] Optimize layout for mobile
+- [ ] Deploy backend to VPS with Nginx
+- [ ] Deploy frontend (same VPS or static host)
+- [ ] Connect domain: `eftelingwachttijden.nl`
 
 ## License
 
