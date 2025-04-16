@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    /* @apply bg-amber-50 text-eftel-primary;
+    font-family: 'Georgia', serif; */
+  }
+}
+
+@layer components {
+  .page-container {
+    /* @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8; */
+  }
+}

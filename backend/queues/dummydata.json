@@ -1,0 +1,759 @@
+{
+  "id": "30713cf6-69a9-47c9-a505-52bb965f01be",
+  "name": "Efteling",
+  "entityType": "PARK",
+  "timezone": "Europe/Amsterdam",
+  "liveData": [
+    {
+      "id": "0831420c-7f5f-4256-ae84-d14d086ec702",
+      "name": "Monorail",
+      "entityType": "ATTRACTION",
+      "parkId": "30713cf6-69a9-47c9-a505-52bb965f01be",
+      "externalId": "volkvanlaafmonorail",
+      "queue": {
+        "STANDBY": {
+          "waitTime": 25
+        }
+      },
+      "status": "OPERATING",
+      "lastUpdated": "2025-04-16T11:03:13Z"
+    },
+    {
+      "id": "173e38aa-090b-4990-93eb-815c808545cd",
+      "name": "Kleuterhof",
+      "entityType": "ATTRACTION",
+      "parkId": "30713cf6-69a9-47c9-a505-52bb965f01be",
+      "externalId": "kleuterhof",
+      "queue": {
+        "STANDBY": {
+          "waitTime": null
+        }
+      },
+      "status": "CLOSED",
+      "lastUpdated": "2025-04-15T09:06:57Z"
+    },
+    {
+      "id": "bcd064eb-0541-486d-81b1-0feed5d6371e",
+      "name": "Nest!",
+      "entityType": "ATTRACTION",
+      "parkId": "30713cf6-69a9-47c9-a505-52bb965f01be",
+      "externalId": "speelbosnest",
+      "queue": {
+        "STANDBY": {
+          "waitTime": 0
+        }
+      },
+      "status": "OPERATING",
+      "lastUpdated": "2025-04-16T08:00:27Z"
+    },
+    {
+      "id": "5472ad0a-63e2-4dd4-b064-d213e243d423",
+      "name": "Archipel",
+      "entityType": "ATTRACTION",
+      "parkId": "30713cf6-69a9-47c9-a505-52bb965f01be",
+      "externalId": "archipel",
+      "queue": {
+        "STANDBY": {
+          "waitTime": null
+        }
+      },
+      "status": "OPERATING",
+      "lastUpdated": "2025-04-16T07:33:18Z"
+    },
+    {
+      "id": "06ff67dc-5e4e-4538-b8f2-f04f5c14e189",
+      "name": "Diorama",
+      "entityType": "ATTRACTION",
+      "parkId": "30713cf6-69a9-47c9-a505-52bb965f01be",
+      "externalId": "diorama",
+      "queue": {
+        "STANDBY": {
+          "waitTime": 0
+        }
+      },
+      "status": "OPERATING",
+      "lastUpdated": "2025-04-16T08:00:27Z"
+    },
+    {
+      "id": "541e90a0-5b37-46e0-884c-7aa2adf76cb1",
+      "name": "Stoomtrein - Marerijk",
+      "entityType": "ATTRACTION",
+      "parkId": "30713cf6-69a9-47c9-a505-52bb965f01be",
+      "externalId": "stoomtreinm",
+      "queue": {
+        "STANDBY": {
+          "waitTime": 10
+        }
+      },
+      "status": "OPERATING",
+      "lastUpdated": "2025-04-16T10:32:11Z"
+    },
+    {
+      "id": "a59b1021-ae84-4a11-a93f-545553f5e568",
+      "name": "Piraña",
+      "entityType": "ATTRACTION",
+      "parkId": "30713cf6-69a9-47c9-a505-52bb965f01be",
+      "externalId": "pirana",
+      "queue": {
+        "STANDBY": {
+          "waitTime": 10
+        }
+      },
+      "status": "OPERATING",
+      "lastUpdated": "2025-04-16T10:42:29Z"
+    },
+    {
+      "id": "8d1d7988-852c-4cab-a71b-d2a4ca3d9501",
+      "name": "Fabula",
+      "entityType": "ATTRACTION",
+      "parkId": "30713cf6-69a9-47c9-a505-52bb965f01be",
+      "externalId": "fabula",
+      "queue": {
+        "STANDBY": {
+          "waitTime": 10
+        }
+      },
+      "status": "OPERATING",
+      "lastUpdated": "2025-04-16T08:00:27Z"
+    },
+    {
+      "id": "d959f7b8-f77e-4943-96d5-fa1133784bce",
+      "name": "Volk van Laaf",
+      "entityType": "ATTRACTION",
+      "parkId": "30713cf6-69a9-47c9-a505-52bb965f01be",
+      "externalId": "volkvanlaaf",
+      "queue": {
+        "STANDBY": {
+          "waitTime": 0
+        }
+      },
+      "status": "OPERATING",
+      "lastUpdated": "2025-04-16T07:35:16Z"
+    },
+    {
+      "id": "45e6c76a-c5a2-4a18-9225-0f0e203a9f6e",
+      "name": "Efteling Museum",
+      "entityType": "ATTRACTION",
+      "parkId": "30713cf6-69a9-47c9-a505-52bb965f01be",
+      "externalId": "eftelingmuseum",
+      "queue": {
+        "STANDBY": {
+          "waitTime": null
+        }
+      },
+      "status": "OPERATING",
+      "lastUpdated": "2025-04-16T08:00:27Z"
+    },
+    {
+      "id": "454f83b8-b767-44a9-a911-e650901e4520",
+      "name": "Villa Volta",
+      "entityType": "ATTRACTION",
+      "parkId": "30713cf6-69a9-47c9-a505-52bb965f01be",
+      "externalId": "villavolta",
+      "queue": {
+        "STANDBY": {
+          "waitTime": 5
+        }
+      },
+      "status": "OPERATING",
+      "lastUpdated": "2025-04-16T10:40:34Z"
+    },
+    {
+      "id": "3b01fd39-77d3-437d-a195-9904e010ec3f",
+      "name": "Fairytale Forest",
+      "entityType": "ATTRACTION",
+      "parkId": "30713cf6-69a9-47c9-a505-52bb965f01be",
+      "externalId": "sprookjesbos",
+      "queue": {
+        "STANDBY": {
+          "waitTime": 0
+        }
+      },
+      "status": "OPERATING",
+      "lastUpdated": "2025-04-16T08:00:27Z"
+    },
+    {
+      "id": "e5a87e0a-bc3c-4cc7-aa03-8349bd395a0c",
+      "name": "Kindervreugd",
+      "entityType": "ATTRACTION",
+      "parkId": "30713cf6-69a9-47c9-a505-52bb965f01be",
+      "externalId": "kindervreugd",
+      "queue": {
+        "STANDBY": {
+          "waitTime": 0
+        }
+      },
+      "status": "OPERATING",
+      "lastUpdated": "2025-04-16T08:00:27Z"
+    },
+    {
+      "id": "8e230820-46cc-46f0-bf00-c0487a557fc3",
+      "name": "Kinderspoor",
+      "entityType": "ATTRACTION",
+      "parkId": "30713cf6-69a9-47c9-a505-52bb965f01be",
+      "externalId": "kinderspoor",
+      "queue": {
+        "STANDBY": {
+          "waitTime": 30
+        }
+      },
+      "status": "OPERATING",
+      "lastUpdated": "2025-04-16T11:03:13Z"
+    },
+    {
+      "id": "4b4a127f-764c-4106-a705-d3c47fb8b361",
+      "name": "De Vliegende Hollander",
+      "entityType": "ATTRACTION",
+      "parkId": "30713cf6-69a9-47c9-a505-52bb965f01be",
+      "externalId": "devliegendehollander",
+      "queue": {
+        "STANDBY": {
+          "waitTime": null
+        },
+        "SINGLE_RIDER": {
+          "waitTime": null
+        }
+      },
+      "status": "REFURBISHMENT",
+      "lastUpdated": "2025-01-06T03:00:37Z"
+    },
+    {
+      "id": "3bfb8272-22e5-40e6-93a0-64f4c9d7fdc6",
+      "name": "Stoomcarrousel",
+      "entityType": "ATTRACTION",
+      "parkId": "30713cf6-69a9-47c9-a505-52bb965f01be",
+      "externalId": "stoomcarrousel",
+      "queue": {
+        "STANDBY": {
+          "waitTime": null
+        }
+      },
+      "status": "REFURBISHMENT",
+      "lastUpdated": "2025-04-14T02:05:45Z"
+    },
+    {
+      "id": "00425f47-172b-4666-9012-a3332ba1d53d",
+      "name": "Stoomtrein - Oost",
+      "entityType": "ATTRACTION",
+      "parkId": "30713cf6-69a9-47c9-a505-52bb965f01be",
+      "externalId": "stoomtreinr",
+      "queue": {
+        "STANDBY": {
+          "waitTime": 10
+        }
+      },
+      "status": "OPERATING",
+      "lastUpdated": "2025-04-16T09:37:06Z"
+    },
+    {
+      "id": "bd02be82-ce77-4c38-8c8d-567df7810648",
+      "name": "Droomvlucht",
+      "entityType": "ATTRACTION",
+      "parkId": "30713cf6-69a9-47c9-a505-52bb965f01be",
+      "externalId": "droomvlucht",
+      "queue": {
+        "STANDBY": {
+          "waitTime": null
+        }
+      },
+      "status": "DOWN",
+      "lastUpdated": "2025-04-16T11:23:12Z"
+    },
+    {
+      "id": "a24936b1-9400-41b3-9727-12c958a37628",
+      "name": "De Oude Tufferbaan",
+      "entityType": "ATTRACTION",
+      "parkId": "30713cf6-69a9-47c9-a505-52bb965f01be",
+      "externalId": "doudetuffer",
+      "queue": {
+        "STANDBY": {
+          "waitTime": 20
+        }
+      },
+      "status": "OPERATING",
+      "lastUpdated": "2025-04-16T11:03:13Z"
+    },
+    {
+      "id": "fadc81f8-28ab-4bdc-b12b-38b1bd728bd7",
+      "name": "Sirocco",
+      "entityType": "ATTRACTION",
+      "parkId": "30713cf6-69a9-47c9-a505-52bb965f01be",
+      "externalId": "sirocco",
+      "queue": {
+        "STANDBY": {
+          "waitTime": 10
+        }
+      },
+      "status": "OPERATING",
+      "lastUpdated": "2025-04-16T10:21:02Z"
+    },
+    {
+      "id": "2ce42f6a-0f0c-471b-9706-3a9c6007bda0",
+      "name": "Halve Maen",
+      "entityType": "ATTRACTION",
+      "parkId": "30713cf6-69a9-47c9-a505-52bb965f01be",
+      "externalId": "halvemaen",
+      "queue": {
+        "STANDBY": {
+          "waitTime": 30
+        }
+      },
+      "status": "OPERATING",
+      "lastUpdated": "2025-04-16T10:23:13Z"
+    },
+    {
+      "id": "b6b1ed81-620b-4994-a65b-e6a0a123fa0f",
+      "name": "Baron 1898",
+      "entityType": "ATTRACTION",
+      "parkId": "30713cf6-69a9-47c9-a505-52bb965f01be",
+      "externalId": "baron1898",
+      "queue": {
+        "STANDBY": {
+          "waitTime": 50
+        },
+        "SINGLE_RIDER": {
+          "waitTime": 35
+        }
+      },
+      "status": "OPERATING",
+      "lastUpdated": "2025-04-16T11:23:12Z"
+    },
+    {
+      "id": "27551b3f-7188-4bd6-b6b9-6bdd6b0f6ddd",
+      "name": "Pagode",
+      "entityType": "ATTRACTION",
+      "parkId": "30713cf6-69a9-47c9-a505-52bb965f01be",
+      "externalId": "pagode",
+      "queue": {
+        "STANDBY": {
+          "waitTime": 5
+        }
+      },
+      "status": "OPERATING",
+      "lastUpdated": "2025-04-16T11:08:50Z"
+    },
+    {
+      "id": "96f50f4d-0452-4d25-8763-c34d2da4353e",
+      "name": "Carnaval Festival",
+      "entityType": "ATTRACTION",
+      "parkId": "30713cf6-69a9-47c9-a505-52bb965f01be",
+      "externalId": "carnavalfestival",
+      "queue": {
+        "STANDBY": {
+          "waitTime": 15
+        }
+      },
+      "status": "OPERATING",
+      "lastUpdated": "2025-04-16T11:03:13Z"
+    },
+    {
+      "id": "d724c3ae-c4a1-4116-9ae6-4cf0407a28f1",
+      "name": "CARO, a wonderful Efteling show",
+      "entityType": "SHOW",
+      "parkId": "30713cf6-69a9-47c9-a505-52bb965f01be",
+      "externalId": "caro",
+      "status": "CLOSED",
+      "showtimes": [],
+      "lastUpdated": "2025-04-16T02:08:25Z"
+    },
+    {
+      "id": "12be9d94-0982-4f1f-9310-d9f37fe5cd3e",
+      "name": "Jokie en Jet",
+      "entityType": "SHOW",
+      "parkId": "30713cf6-69a9-47c9-a505-52bb965f01be",
+      "externalId": "jokieenjet",
+      "status": "OPERATING",
+      "showtimes": [
+        {
+          "type": "Parkshow",
+          "endTime": "2025-04-16T12:30:00+02:00",
+          "startTime": "2025-04-16T12:00:00+02:00"
+        },
+        {
+          "type": "Parkshow",
+          "endTime": "2025-04-16T13:30:00+02:00",
+          "startTime": "2025-04-16T13:00:00+02:00"
+        },
+        {
+          "type": "Parkshow",
+          "endTime": "2025-04-16T14:30:00+02:00",
+          "startTime": "2025-04-16T14:00:00+02:00"
+        },
+        {
+          "type": "Parkshow",
+          "endTime": "2025-04-16T15:30:00+02:00",
+          "startTime": "2025-04-16T15:00:00+02:00"
+        }
+      ],
+      "lastUpdated": "2025-04-16T08:59:12Z"
+    },
+    {
+      "id": "9722740b-0cba-45e5-bb00-b495acf816f8",
+      "name": "Pardoes the magician",
+      "entityType": "SHOW",
+      "parkId": "30713cf6-69a9-47c9-a505-52bb965f01be",
+      "externalId": "pardoesdetovernar",
+      "status": "OPERATING",
+      "showtimes": [
+        {
+          "type": "Ontmoet & begroet",
+          "endTime": "2025-04-16T12:05:00+02:00",
+          "startTime": "2025-04-16T11:45:00+02:00"
+        },
+        {
+          "type": "Ontmoet & begroet",
+          "endTime": "2025-04-16T13:20:00+02:00",
+          "startTime": "2025-04-16T13:00:00+02:00"
+        },
+        {
+          "type": "Ontmoet & begroet",
+          "endTime": "2025-04-16T14:20:00+02:00",
+          "startTime": "2025-04-16T14:00:00+02:00"
+        },
+        {
+          "type": "Ontmoet & begroet",
+          "endTime": "2025-04-16T15:20:00+02:00",
+          "startTime": "2025-04-16T15:00:00+02:00"
+        },
+        {
+          "type": "Ontmoet & begroet",
+          "endTime": "2025-04-16T16:20:00+02:00",
+          "startTime": "2025-04-16T16:00:00+02:00"
+        }
+      ],
+      "lastUpdated": "2025-04-16T02:08:25Z"
+    },
+    {
+      "id": "36fcb29f-04f6-42c6-b385-5c12bf18becc",
+      "name": "Efteling inhabitants",
+      "entityType": "SHOW",
+      "parkId": "30713cf6-69a9-47c9-a505-52bb965f01be",
+      "externalId": "ontmoeteftelingbewoners",
+      "status": "CLOSED",
+      "showtimes": [
+        {
+          "type": "Showtime",
+          "endTime": "2025-04-16T12:45:00+02:00",
+          "startTime": "2025-04-16T09:00:00+02:00"
+        }
+      ],
+      "lastUpdated": "2025-04-16T10:45:53Z"
+    },
+    {
+      "id": "12c481c0-5f00-445d-b237-e5888b79be51",
+      "name": "Sprookjesboomshow",
+      "entityType": "SHOW",
+      "parkId": "30713cf6-69a9-47c9-a505-52bb965f01be",
+      "externalId": "sprookjesboomerwaseens",
+      "status": "OPERATING",
+      "showtimes": [
+        {
+          "type": "Parkshow",
+          "endTime": "2025-04-16T11:55:00+02:00",
+          "startTime": "2025-04-16T11:30:00+02:00"
+        },
+        {
+          "type": "Parkshow",
+          "endTime": "2025-04-16T12:55:00+02:00",
+          "startTime": "2025-04-16T12:30:00+02:00"
+        },
+        {
+          "type": "Parkshow",
+          "endTime": "2025-04-16T13:55:00+02:00",
+          "startTime": "2025-04-16T13:30:00+02:00"
+        },
+        {
+          "type": "Parkshow",
+          "endTime": "2025-04-16T14:55:00+02:00",
+          "startTime": "2025-04-16T14:30:00+02:00"
+        },
+        {
+          "type": "Parkshow",
+          "endTime": "2025-04-16T15:55:00+02:00",
+          "startTime": "2025-04-16T15:30:00+02:00"
+        }
+      ],
+      "lastUpdated": "2025-04-16T02:08:25Z"
+    },
+    {
+      "id": "0faaaa06-fe59-440d-91a0-7745893a5448",
+      "name": "The Fairytale Collector",
+      "entityType": "SHOW",
+      "parkId": "30713cf6-69a9-47c9-a505-52bb965f01be",
+      "externalId": "sprookjessprokkelaar",
+      "status": "OPERATING",
+      "showtimes": [
+        {
+          "type": "Showtime",
+          "endTime": "2025-04-16T12:00:00+02:00",
+          "startTime": "2025-04-16T11:30:00+02:00"
+        },
+        {
+          "type": "Showtime",
+          "endTime": "2025-04-16T13:00:00+02:00",
+          "startTime": "2025-04-16T12:30:00+02:00"
+        },
+        {
+          "type": "Showtime",
+          "endTime": "2025-04-16T14:00:00+02:00",
+          "startTime": "2025-04-16T13:30:00+02:00"
+        },
+        {
+          "type": "Showtime",
+          "endTime": "2025-04-16T15:00:00+02:00",
+          "startTime": "2025-04-16T14:30:00+02:00"
+        },
+        {
+          "type": "Showtime",
+          "endTime": "2025-04-16T16:00:00+02:00",
+          "startTime": "2025-04-16T15:30:00+02:00"
+        },
+        {
+          "type": "Showtime",
+          "endTime": "2025-04-16T17:00:00+02:00",
+          "startTime": "2025-04-16T16:30:00+02:00"
+        }
+      ],
+      "lastUpdated": "2025-04-16T02:08:25Z"
+    },
+    {
+      "id": "c1f6a723-a20d-4efe-9e4c-4bc7cdd6eade",
+      "name": "Virginie and Otto Charlatan",
+      "entityType": "SHOW",
+      "parkId": "30713cf6-69a9-47c9-a505-52bb965f01be",
+      "externalId": "virginieenottocharlatan",
+      "status": "OPERATING",
+      "showtimes": [
+        {
+          "type": "Parkshow",
+          "endTime": "2025-04-16T12:30:00+02:00",
+          "startTime": "2025-04-16T12:00:00+02:00"
+        },
+        {
+          "type": "Parkshow",
+          "endTime": "2025-04-16T13:30:00+02:00",
+          "startTime": "2025-04-16T13:00:00+02:00"
+        },
+        {
+          "type": "Parkshow",
+          "endTime": "2025-04-16T14:30:00+02:00",
+          "startTime": "2025-04-16T14:00:00+02:00"
+        },
+        {
+          "type": "Parkshow",
+          "endTime": "2025-04-16T15:30:00+02:00",
+          "startTime": "2025-04-16T15:00:00+02:00"
+        },
+        {
+          "type": "Parkshow",
+          "endTime": "2025-04-16T16:30:00+02:00",
+          "startTime": "2025-04-16T16:00:00+02:00"
+        }
+      ],
+      "lastUpdated": "2025-04-16T02:08:25Z"
+    },
+    {
+      "id": "fe63143e-5756-42e6-98b3-c926c028cbda",
+      "name": "Raveleijn",
+      "entityType": "SHOW",
+      "parkId": "30713cf6-69a9-47c9-a505-52bb965f01be",
+      "externalId": "raveleijn",
+      "status": "OPERATING",
+      "showtimes": [
+        {
+          "type": "Parkshow",
+          "endTime": "2025-04-16T11:45:00+02:00",
+          "startTime": "2025-04-16T11:30:00+02:00"
+        },
+        {
+          "type": "Parkshow",
+          "endTime": "2025-04-16T13:45:00+02:00",
+          "startTime": "2025-04-16T13:30:00+02:00"
+        },
+        {
+          "type": "Parkshow",
+          "endTime": "2025-04-16T15:45:00+02:00",
+          "startTime": "2025-04-16T15:30:00+02:00"
+        },
+        {
+          "type": "Parkshow",
+          "endTime": "2025-04-16T17:15:00+02:00",
+          "startTime": "2025-04-16T17:00:00+02:00"
+        }
+      ],
+      "lastUpdated": "2025-04-16T02:08:25Z"
+    },
+    {
+      "id": "1f356f6c-2033-48bb-b2d1-761c73441ac1",
+      "name": "Danse Macabre",
+      "entityType": "ATTRACTION",
+      "parkId": "30713cf6-69a9-47c9-a505-52bb965f01be",
+      "externalId": "dansemacabre",
+      "queue": {
+        "STANDBY": {
+          "waitTime": 45
+        },
+        "SINGLE_RIDER": {
+          "waitTime": null
+        }
+      },
+      "status": "OPERATING",
+      "lastUpdated": "2025-04-16T11:08:49Z"
+    },
+    {
+      "id": "b4eedd7d-d8c4-4943-8e2c-e42d2dbffd39",
+      "name": "Gondoletta",
+      "entityType": "ATTRACTION",
+      "parkId": "30713cf6-69a9-47c9-a505-52bb965f01be",
+      "externalId": "gondoletta",
+      "queue": {
+        "STANDBY": {
+          "waitTime": 10
+        }
+      },
+      "status": "OPERATING",
+      "lastUpdated": "2025-04-16T11:26:15Z"
+    },
+    {
+      "id": "598a4fe2-7e28-459a-a483-532dd16a8e19",
+      "name": "Anton Pieckplein puppet theatre",
+      "entityType": "SHOW",
+      "parkId": "30713cf6-69a9-47c9-a505-52bb965f01be",
+      "externalId": "antonpieckpleinpoppenkasttheater",
+      "status": "CLOSED",
+      "showtimes": [],
+      "lastUpdated": "2025-04-14T02:05:44Z"
+    },
+    {
+      "id": "47784759-d88d-439f-9f14-6bf0206aa722",
+      "name": "Aquanura",
+      "entityType": "SHOW",
+      "parkId": "30713cf6-69a9-47c9-a505-52bb965f01be",
+      "externalId": "aquanura",
+      "status": "OPERATING",
+      "showtimes": [
+        {
+          "type": "Efteling Symphonica",
+          "endTime": "2025-04-16T18:27:00+02:00",
+          "startTime": "2025-04-16T18:15:00+02:00"
+        },
+        {
+          "type": "Efteling Symphonica",
+          "endTime": "2025-04-16T19:27:00+02:00",
+          "startTime": "2025-04-16T19:15:00+02:00"
+        }
+      ],
+      "lastUpdated": "2025-04-16T02:08:25Z"
+    },
+    {
+      "id": "8901e445-6667-4634-8e7c-09a31e23dc4b",
+      "name": "Anton Pieckplein",
+      "entityType": "ATTRACTION",
+      "parkId": "30713cf6-69a9-47c9-a505-52bb965f01be",
+      "externalId": "carrouselsantonpieckplein",
+      "queue": {
+        "STANDBY": {
+          "waitTime": 0
+        }
+      },
+      "status": "OPERATING",
+      "lastUpdated": "2025-04-16T08:00:27Z"
+    },
+    {
+      "id": "5e55ad4a-d288-451f-9185-a301bc3d2757",
+      "name": "Fata Morgana",
+      "entityType": "ATTRACTION",
+      "parkId": "30713cf6-69a9-47c9-a505-52bb965f01be",
+      "externalId": "fatamorgana",
+      "queue": {
+        "STANDBY": {
+          "waitTime": 5
+        }
+      },
+      "status": "OPERATING",
+      "lastUpdated": "2025-04-16T10:40:34Z"
+    },
+    {
+      "id": "c0137454-0e1f-451e-85bd-aef4f443c51e",
+      "name": "Python",
+      "entityType": "ATTRACTION",
+      "parkId": "30713cf6-69a9-47c9-a505-52bb965f01be",
+      "externalId": "python",
+      "queue": {
+        "STANDBY": {
+          "waitTime": 50
+        },
+        "SINGLE_RIDER": {
+          "waitTime": null
+        }
+      },
+      "status": "OPERATING",
+      "lastUpdated": "2025-04-16T11:11:07Z"
+    },
+    {
+      "id": "40a68fb1-428e-4a79-82ac-58e87182a3d1",
+      "name": "Max & Moritz",
+      "entityType": "ATTRACTION",
+      "parkId": "30713cf6-69a9-47c9-a505-52bb965f01be",
+      "externalId": "maxmoritz",
+      "queue": {
+        "STANDBY": {
+          "waitTime": 15
+        },
+        "SINGLE_RIDER": {
+          "waitTime": 10
+        }
+      },
+      "status": "OPERATING",
+      "lastUpdated": "2025-04-16T11:20:49Z"
+    },
+    {
+      "id": "de36a8e7-8c57-459e-8786-4e63e24427d1",
+      "name": "Symbolica",
+      "entityType": "ATTRACTION",
+      "parkId": "30713cf6-69a9-47c9-a505-52bb965f01be",
+      "externalId": "symbolica",
+      "queue": {
+        "STANDBY": {
+          "waitTime": 35
+        },
+        "SINGLE_RIDER": {
+          "waitTime": 5
+        }
+      },
+      "status": "OPERATING",
+      "lastUpdated": "2025-04-16T11:03:13Z"
+    },
+    {
+      "id": "1fdcb9bd-7ce3-4b23-a89c-b6d5f338cae9",
+      "name": "Vogel Rok",
+      "entityType": "ATTRACTION",
+      "parkId": "30713cf6-69a9-47c9-a505-52bb965f01be",
+      "externalId": "vogelrok",
+      "queue": {
+        "STANDBY": {
+          "waitTime": 25
+        }
+      },
+      "status": "OPERATING",
+      "lastUpdated": "2025-04-16T10:37:35Z"
+    },
+    {
+      "id": "5db59b64-d2cd-4211-a1fa-b4369b6e110a",
+      "name": "Joris en de Draak",
+      "entityType": "ATTRACTION",
+      "parkId": "30713cf6-69a9-47c9-a505-52bb965f01be",
+      "externalId": "jorisendedraak",
+      "queue": {
+        "STANDBY": {
+          "waitTime": 45
+        },
+        "SINGLE_RIDER": {
+          "waitTime": 30
+        }
+      },
+      "status": "OPERATING",
+      "lastUpdated": "2025-04-16T11:20:49Z"
+    }
+  ]
+}
