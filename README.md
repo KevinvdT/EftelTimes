@@ -1,4 +1,5 @@
 # EftelTimes
+[![wakatime](https://wakatime.com/badge/github/KevinvdT/EftelTimes.svg)](https://wakatime.com/badge/github/KevinvdT/EftelTimes)
 
 Queue times application for the Efteling theme park. Built with React and Django.
 
@@ -99,11 +100,37 @@ USE_DUMMY_DATA=True  # Set to False for real API
 
 ### 🎨 Phase 2: UI & Component Architecture
 - [x] Project folders organized (`components/`, `layouts/`, `pages/`, `store/`, etc.)
-- [x] Build reusable UI components (Row component with status/times display)
-- [x] Create layout components (HomePage container)
-- [x] Style and structure UI using mock data
-- [ ] Build additional UI components (cards, tags, display elements)
-- [ ] Ensure mobile responsiveness and visual polish
+
+#### UI Components (Presentational)
+- [x] Build reusable UI components:
+  - [x] Time display component
+  - [x] Status indicator component
+  - [x] Entity row component
+- [ ] Additional UI components:
+  - [ ] Tag components for status/type
+  - [ ] Card components for attraction details
+  - [ ] Loading and error state components
+  - [ ] Toggle and button components
+
+#### Layout Components
+- [x] Create layout components:
+  - [x] Page container with consistent spacing
+  - [x] Header component
+- [ ] Additional layout components:
+  - [ ] Footer component
+  - [ ] Navigation component
+  - [ ] Responsive grid system
+  - [ ] Section container components
+
+#### Page Components
+- [x] HomePage component:
+  - [x] Data fetching and state management
+  - [x] Layout assembly
+  - [x] UI component integration
+- [ ] Additional page components:
+  - [ ] Attraction detail page
+  - [ ] Settings page
+  - [ ] About page
 
 ### 🔌 Phase 3: API Integration
 - [x] Switch from Python wrapper to direct ThemeParks API usage

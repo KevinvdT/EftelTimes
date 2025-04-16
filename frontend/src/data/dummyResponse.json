@@ -1,0 +1,1333 @@
+{
+  "last_updated": "2025-04-16T14:35:28.843945+00:00",
+  "source": "tpw-api",
+  "entities": {
+    "attractions": [
+      {
+        "name": "Monorail",
+        "translations": {
+          "en": {
+            "name": "People of Laaf Monorail",
+            "is_official": false,
+            "is_same": false
+          },
+          "de": {
+            "name": "Monorail Volk von Laaf",
+            "is_official": false,
+            "is_same": false
+          },
+          "fr": {
+            "name": "Monorail du Peuple de Laaf",
+            "is_official": false,
+            "is_same": false
+          },
+          "es": {
+            "name": "Monorraíl del Pueblo de Laaf",
+            "is_official": false,
+            "is_same": false
+          },
+          "ja": {
+            "name": "ラーフの人々のモノレール",
+            "transcription": "フォルク・ファン・ラーフ・モノレール",
+            "is_official": false,
+            "is_same": false
+          }
+        },
+        "status": "operating",
+        "type": "attraction",
+        "area": "Marerijk",
+        "externalId": "volkvanlaafmonorail",
+        "waitTime": 25,
+        "singleRider": {
+          "available": false,
+          "status": null,
+          "waitTime": null
+        }
+      },
+      {
+        "name": "Stoomtrein - Marerijk",
+        "translations": {
+          "en": {
+            "name": "Steam Train",
+            "is_official": false,
+            "is_same": false
+          },
+          "de": {
+            "name": "Dampfzug",
+            "is_official": false,
+            "is_same": false
+          },
+          "fr": {
+            "name": "Train à Vapeur",
+            "is_official": false,
+            "is_same": false
+          },
+          "es": {
+            "name": "Tren de Vapor",
+            "is_official": false,
+            "is_same": false
+          },
+          "ja": {
+            "name": "蒸気機関車",
+            "transcription": "ストーム・トレイン",
+            "is_official": false,
+            "is_same": false
+          }
+        },
+        "status": "operating",
+        "type": "attraction",
+        "area": "Marerijk",
+        "externalId": "stoomtreinm",
+        "waitTime": 10,
+        "singleRider": {
+          "available": false,
+          "status": null,
+          "waitTime": null
+        }
+      },
+      {
+        "name": "Piraña",
+        "translations": {
+          "en": {
+            "name": "Piraña",
+            "is_official": false,
+            "is_same": true
+          },
+          "de": {
+            "name": "Piraña",
+            "is_official": false,
+            "is_same": true
+          },
+          "fr": {
+            "name": "Piraña",
+            "is_official": false,
+            "is_same": true
+          },
+          "es": {
+            "name": "Piraña",
+            "is_official": false,
+            "is_same": true
+          },
+          "ja": {
+            "name": "ピラーニャ",
+            "transcription": "ピランヤ",
+            "is_official": false,
+            "is_same": true
+          }
+        },
+        "status": "operating",
+        "type": "attraction",
+        "area": "Anderrijk",
+        "externalId": "pirana",
+        "waitTime": 10,
+        "singleRider": {
+          "available": false,
+          "status": null,
+          "waitTime": null
+        }
+      },
+      {
+        "name": "Fabula",
+        "translations": {
+          "en": {
+            "name": "Fabula",
+            "is_official": false,
+            "is_same": true
+          },
+          "de": {
+            "name": "Fabula",
+            "is_official": false,
+            "is_same": true
+          },
+          "fr": {
+            "name": "Fabula",
+            "is_official": false,
+            "is_same": true
+          },
+          "es": {
+            "name": "Fabula",
+            "is_official": false,
+            "is_same": true
+          },
+          "ja": {
+            "name": "ファブラ",
+            "transcription": "ファブラ",
+            "is_official": false,
+            "is_same": true
+          }
+        },
+        "status": "operating",
+        "type": "attraction",
+        "area": "Fantasierijk",
+        "externalId": "fabula",
+        "waitTime": 10,
+        "singleRider": {
+          "available": false,
+          "status": null,
+          "waitTime": null
+        }
+      },
+      {
+        "name": "Volk van Laaf",
+        "translations": {
+          "en": {
+            "name": "People of Laaf",
+            "is_official": false,
+            "is_same": false
+          },
+          "de": {
+            "name": "Volk von Laaf",
+            "is_official": false,
+            "is_same": false
+          },
+          "fr": {
+            "name": "Peuple de Laaf",
+            "is_official": false,
+            "is_same": false
+          },
+          "es": {
+            "name": "Pueblo de Laaf",
+            "is_official": false,
+            "is_same": false
+          },
+          "ja": {
+            "name": "ラーフの人々",
+            "transcription": "フォルク・ファン・ラーフ",
+            "is_official": false,
+            "is_same": false
+          }
+        },
+        "status": "operating",
+        "type": "attraction",
+        "area": "Marerijk",
+        "externalId": "volkvanlaaf",
+        "waitTime": 0,
+        "singleRider": {
+          "available": false,
+          "status": null,
+          "waitTime": null
+        }
+      },
+      {
+        "name": "Villa Volta",
+        "translations": {
+          "en": {
+            "name": "Villa Volta",
+            "is_official": false,
+            "is_same": true
+          },
+          "de": {
+            "name": "Villa Volta",
+            "is_official": false,
+            "is_same": true
+          },
+          "fr": {
+            "name": "Villa Volta",
+            "is_official": false,
+            "is_same": true
+          },
+          "es": {
+            "name": "Villa Volta",
+            "is_official": false,
+            "is_same": true
+          },
+          "ja": {
+            "name": "ヴィラ・ヴォルタ",
+            "transcription": "ヴィラ・ヴォルタ",
+            "is_official": false,
+            "is_same": true
+          }
+        },
+        "status": "operating",
+        "type": "attraction",
+        "area": "Marerijk",
+        "externalId": "villavolta",
+        "waitTime": 10,
+        "singleRider": {
+          "available": false,
+          "status": null,
+          "waitTime": null
+        }
+      },
+      {
+        "name": "Fairytale Forest",
+        "translations": {
+          "en": {
+            "name": "Fairytale Forest",
+            "is_official": false,
+            "is_same": false
+          },
+          "de": {
+            "name": "Märchenwald",
+            "is_official": false,
+            "is_same": false
+          },
+          "fr": {
+            "name": "Forêt des Contes",
+            "is_official": false,
+            "is_same": false
+          },
+          "es": {
+            "name": "Bosque de Cuentos",
+            "is_official": false,
+            "is_same": false
+          },
+          "ja": {
+            "name": "おとぎの森",
+            "transcription": "スプローキェス・ボス",
+            "is_official": false,
+            "is_same": false
+          }
+        },
+        "status": "operating",
+        "type": "attraction",
+        "area": "Sprookjesbos",
+        "externalId": "sprookjesbos",
+        "waitTime": 0,
+        "singleRider": {
+          "available": false,
+          "status": null,
+          "waitTime": null
+        }
+      },
+      {
+        "name": "Kinderspoor",
+        "translations": {
+          "en": {
+            "name": "Children's Railway",
+            "is_official": false,
+            "is_same": false
+          },
+          "de": {
+            "name": "Kinderbahn",
+            "is_official": false,
+            "is_same": false
+          },
+          "fr": {
+            "name": "Chemin de Fer des Enfants",
+            "is_official": false,
+            "is_same": false
+          },
+          "es": {
+            "name": "Ferrocarril Infantil",
+            "is_official": false,
+            "is_same": false
+          },
+          "ja": {
+            "name": "子供の鉄道",
+            "transcription": "キンダー・スプール",
+            "is_official": false,
+            "is_same": false
+          }
+        },
+        "status": "operating",
+        "type": "attraction",
+        "area": "Ruigrijk",
+        "externalId": "kinderspoor",
+        "waitTime": 40,
+        "singleRider": {
+          "available": false,
+          "status": null,
+          "waitTime": null
+        }
+      },
+      {
+        "name": "De Vliegende Hollander",
+        "translations": {
+          "en": {
+            "name": "The Flying Dutchman",
+            "is_official": false,
+            "is_same": false
+          },
+          "de": {
+            "name": "Der Fliegende Holländer",
+            "is_official": false,
+            "is_same": false
+          },
+          "fr": {
+            "name": "Le Hollandais Volant",
+            "is_official": false,
+            "is_same": false
+          },
+          "es": {
+            "name": "El Holandés Volador",
+            "is_official": false,
+            "is_same": false
+          },
+          "ja": {
+            "name": "空飛ぶオランダ人",
+            "transcription": "デ・フリーヘンデ・ホランダー",
+            "is_official": false,
+            "is_same": false
+          }
+        },
+        "status": "refurbishment",
+        "type": "attraction",
+        "area": "Ruigrijk",
+        "externalId": "devliegendehollander",
+        "waitTime": null,
+        "singleRider": {
+          "available": true,
+          "status": "closed",
+          "waitTime": null
+        }
+      },
+      {
+        "name": "Stoomcarrousel",
+        "translations": {
+          "en": {
+            "name": "Steam Carousel",
+            "is_official": false,
+            "is_same": false
+          },
+          "de": {
+            "name": "Dampfkarussell",
+            "is_official": false,
+            "is_same": false
+          },
+          "fr": {
+            "name": "Carrousel à Vapeur",
+            "is_official": false,
+            "is_same": false
+          },
+          "es": {
+            "name": "Carrusel de Vapor",
+            "is_official": false,
+            "is_same": false
+          },
+          "ja": {
+            "name": "蒸気カルーセル",
+            "transcription": "ストーム・カロセル",
+            "is_official": false,
+            "is_same": false
+          }
+        },
+        "status": "refurbishment",
+        "type": "attraction",
+        "area": "Marerijk",
+        "externalId": "stoomcarrousel",
+        "waitTime": null,
+        "singleRider": {
+          "available": false,
+          "status": null,
+          "waitTime": null
+        }
+      },
+      {
+        "name": "Stoomtrein - Oost",
+        "translations": {
+          "en": {
+            "name": "Steam Train",
+            "is_official": false,
+            "is_same": false
+          },
+          "de": {
+            "name": "Dampfzug",
+            "is_official": false,
+            "is_same": false
+          },
+          "fr": {
+            "name": "Train à Vapeur",
+            "is_official": false,
+            "is_same": false
+          },
+          "es": {
+            "name": "Tren de Vapor",
+            "is_official": false,
+            "is_same": false
+          },
+          "ja": {
+            "name": "蒸気機関車",
+            "transcription": "ストーム・トレイン",
+            "is_official": false,
+            "is_same": false
+          }
+        },
+        "status": "operating",
+        "type": "attraction",
+        "area": "Ruigrijk",
+        "externalId": "stoomtreinr",
+        "waitTime": 10,
+        "singleRider": {
+          "available": false,
+          "status": null,
+          "waitTime": null
+        }
+      },
+      {
+        "name": "Droomvlucht",
+        "translations": {
+          "en": {
+            "name": "Dream Flight",
+            "is_official": false,
+            "is_same": false
+          },
+          "de": {
+            "name": "Traumflug",
+            "is_official": false,
+            "is_same": false
+          },
+          "fr": {
+            "name": "Vol de Rêve",
+            "is_official": false,
+            "is_same": false
+          },
+          "es": {
+            "name": "Vuelo de Ensueño",
+            "is_official": false,
+            "is_same": false
+          },
+          "ja": {
+            "name": "夢の飛行",
+            "transcription": "ドローム・フルフト",
+            "is_official": false,
+            "is_same": false
+          }
+        },
+        "status": "operating",
+        "type": "attraction",
+        "area": "Marerijk",
+        "externalId": "droomvlucht",
+        "waitTime": 35,
+        "singleRider": {
+          "available": false,
+          "status": null,
+          "waitTime": null
+        }
+      },
+      {
+        "name": "De Oude Tufferbaan",
+        "translations": {
+          "en": {
+            "name": "The Old Tuffer",
+            "is_official": false,
+            "is_same": false
+          },
+          "de": {
+            "name": "Der Alte Tuffer",
+            "is_official": false,
+            "is_same": false
+          },
+          "fr": {
+            "name": "Le Vieux Tuffer",
+            "is_official": false,
+            "is_same": false
+          },
+          "es": {
+            "name": "El Viejo Tuffer",
+            "is_official": false,
+            "is_same": false
+          },
+          "ja": {
+            "name": "老いたタッファー",
+            "transcription": "ドウデ・タッファー",
+            "is_official": false,
+            "is_same": false
+          }
+        },
+        "status": "operating",
+        "type": "attraction",
+        "area": "Ruigrijk",
+        "externalId": "doudetuffer",
+        "waitTime": 20,
+        "singleRider": {
+          "available": false,
+          "status": null,
+          "waitTime": null
+        }
+      },
+      {
+        "name": "Sirocco",
+        "translations": {
+          "en": {
+            "name": "Sirocco",
+            "is_official": false,
+            "is_same": true
+          },
+          "de": {
+            "name": "Sirocco",
+            "is_official": false,
+            "is_same": true
+          },
+          "fr": {
+            "name": "Sirocco",
+            "is_official": false,
+            "is_same": true
+          },
+          "es": {
+            "name": "Siroco",
+            "is_official": false,
+            "is_same": true
+          },
+          "ja": {
+            "name": "シロッコ",
+            "transcription": "シロッコ",
+            "is_official": false,
+            "is_same": true
+          }
+        },
+        "status": "operating",
+        "type": "attraction",
+        "area": "Reizenrijk",
+        "externalId": "sirocco",
+        "waitTime": 10,
+        "singleRider": {
+          "available": false,
+          "status": null,
+          "waitTime": null
+        }
+      },
+      {
+        "name": "Halve Maen",
+        "translations": {
+          "en": {
+            "name": "Half Moon",
+            "is_official": false,
+            "is_same": false
+          },
+          "de": {
+            "name": "Halbmond",
+            "is_official": false,
+            "is_same": false
+          },
+          "fr": {
+            "name": "Demi-Lune",
+            "is_official": false,
+            "is_same": false
+          },
+          "es": {
+            "name": "Media Luna",
+            "is_official": false,
+            "is_same": false
+          },
+          "ja": {
+            "name": "半月",
+            "transcription": "ハルフェ・マーン",
+            "is_official": false,
+            "is_same": false
+          }
+        },
+        "status": "operating",
+        "type": "attraction",
+        "area": "Ruigrijk",
+        "externalId": "halvemaen",
+        "waitTime": 15,
+        "singleRider": {
+          "available": false,
+          "status": null,
+          "waitTime": null
+        }
+      },
+      {
+        "name": "Baron 1898",
+        "translations": {
+          "en": {
+            "name": "Baron 1898",
+            "is_official": false,
+            "is_same": true
+          },
+          "de": {
+            "name": "Baron 1898",
+            "is_official": false,
+            "is_same": true
+          },
+          "fr": {
+            "name": "Baron 1898",
+            "is_official": false,
+            "is_same": true
+          },
+          "es": {
+            "name": "Baron 1898",
+            "is_official": false,
+            "is_same": true
+          },
+          "ja": {
+            "name": "バロン1898",
+            "transcription": "バロン1898",
+            "is_official": false,
+            "is_same": true
+          }
+        },
+        "status": "operating",
+        "type": "attraction",
+        "area": "Ruigrijk",
+        "externalId": "baron1898",
+        "waitTime": 30,
+        "singleRider": {
+          "available": true,
+          "status": "closed",
+          "waitTime": 35
+        }
+      },
+      {
+        "name": "Pagode",
+        "translations": {
+          "en": {
+            "name": "Pagoda",
+            "is_official": false,
+            "is_same": true
+          },
+          "de": {
+            "name": "Pagode",
+            "is_official": false,
+            "is_same": true
+          },
+          "fr": {
+            "name": "Pagode",
+            "is_official": false,
+            "is_same": true
+          },
+          "es": {
+            "name": "Pagoda",
+            "is_official": false,
+            "is_same": true
+          },
+          "ja": {
+            "name": "パゴダ",
+            "transcription": "パゴーデ",
+            "is_official": false,
+            "is_same": true
+          }
+        },
+        "status": "operating",
+        "type": "attraction",
+        "area": "Reizenrijk",
+        "externalId": "pagode",
+        "waitTime": 5,
+        "singleRider": {
+          "available": false,
+          "status": null,
+          "waitTime": null
+        }
+      },
+      {
+        "name": "Carnaval Festival",
+        "translations": {
+          "en": {
+            "name": "Carnaval Festival",
+            "is_official": false,
+            "is_same": true
+          },
+          "de": {
+            "name": "Karnevalsfestival",
+            "is_official": false,
+            "is_same": false
+          },
+          "fr": {
+            "name": "Festival du Carnaval",
+            "is_official": false,
+            "is_same": false
+          },
+          "es": {
+            "name": "Festival del Carnaval",
+            "is_official": false,
+            "is_same": false
+          },
+          "ja": {
+            "name": "カーニバルフェスティバル",
+            "transcription": "カルナバル・フェスティバル",
+            "is_official": false,
+            "is_same": true
+          }
+        },
+        "status": "operating",
+        "type": "attraction",
+        "area": "Reizenrijk",
+        "externalId": "carnavalfestival",
+        "waitTime": 0,
+        "singleRider": {
+          "available": false,
+          "status": null,
+          "waitTime": null
+        }
+      },
+      {
+        "name": "Gondoletta",
+        "translations": {
+          "en": {
+            "name": "Gondoletta",
+            "is_official": false,
+            "is_same": true
+          },
+          "de": {
+            "name": "Gondoletta",
+            "is_official": false,
+            "is_same": true
+          },
+          "fr": {
+            "name": "Gondoletta",
+            "is_official": false,
+            "is_same": true
+          },
+          "es": {
+            "name": "Gondoletta",
+            "is_official": false,
+            "is_same": true
+          },
+          "ja": {
+            "name": "ゴンドレッタ",
+            "transcription": "ゴンドレッタ",
+            "is_official": false,
+            "is_same": true
+          }
+        },
+        "status": "operating",
+        "type": "attraction",
+        "area": "Reizenrijk",
+        "externalId": "gondoletta",
+        "waitTime": 15,
+        "singleRider": {
+          "available": false,
+          "status": null,
+          "waitTime": null
+        }
+      },
+      {
+        "name": "Danse Macabre",
+        "translations": {
+          "en": {
+            "name": "Dance Macabre",
+            "is_official": false,
+            "is_same": true
+          },
+          "de": {
+            "name": "Totentanz",
+            "is_official": false,
+            "is_same": false
+          },
+          "fr": {
+            "name": "Danse Macabre",
+            "is_official": false,
+            "is_same": true
+          },
+          "es": {
+            "name": "Danza Macabra",
+            "is_official": false,
+            "is_same": true
+          },
+          "ja": {
+            "name": "死の舞踏",
+            "transcription": "ダンス・マカーブル",
+            "is_official": false,
+            "is_same": false
+          }
+        },
+        "status": "operating",
+        "type": "attraction",
+        "area": "Anderrijk",
+        "externalId": "dansemacabre",
+        "waitTime": 35,
+        "singleRider": {
+          "available": true,
+          "status": "closed",
+          "waitTime": null
+        }
+      },
+      {
+        "name": "Anton Pieckplein",
+        "translations": {
+          "en": {
+            "name": "Anton Pieck Square Carousel",
+            "is_official": false,
+            "is_same": false
+          },
+          "de": {
+            "name": "Anton-Pieck-Platz-Karussell",
+            "is_official": false,
+            "is_same": false
+          },
+          "fr": {
+            "name": "Carrousel de la Place Anton Pieck",
+            "is_official": false,
+            "is_same": false
+          },
+          "es": {
+            "name": "Carrusel de la Plaza Anton Pieck",
+            "is_official": false,
+            "is_same": false
+          },
+          "ja": {
+            "name": "アントン・ピーク広場のカルーセル",
+            "transcription": "カロセル・サントン・ピーク・プレイン",
+            "is_official": false,
+            "is_same": false
+          }
+        },
+        "status": "operating",
+        "type": "attraction",
+        "area": "Marerijk",
+        "externalId": "carrouselsantonpieckplein",
+        "waitTime": 0,
+        "singleRider": {
+          "available": false,
+          "status": null,
+          "waitTime": null
+        }
+      },
+      {
+        "name": "Fata Morgana",
+        "translations": {
+          "en": {
+            "name": "Fata Morgana",
+            "is_official": false,
+            "is_same": true
+          },
+          "de": {
+            "name": "Fata Morgana",
+            "is_official": false,
+            "is_same": true
+          },
+          "fr": {
+            "name": "Fata Morgana",
+            "is_official": false,
+            "is_same": true
+          },
+          "es": {
+            "name": "Fata Morgana",
+            "is_official": false,
+            "is_same": true
+          },
+          "ja": {
+            "name": "ファタ・モルガナ",
+            "transcription": "ファタ・モルガナ",
+            "is_official": false,
+            "is_same": true
+          }
+        },
+        "status": "operating",
+        "type": "attraction",
+        "area": "Anderrijk",
+        "externalId": "fatamorgana",
+        "waitTime": 0,
+        "singleRider": {
+          "available": false,
+          "status": null,
+          "waitTime": null
+        }
+      },
+      {
+        "name": "Python",
+        "translations": {
+          "en": {
+            "name": "Python",
+            "is_official": false,
+            "is_same": true
+          },
+          "de": {
+            "name": "Python",
+            "is_official": false,
+            "is_same": true
+          },
+          "fr": {
+            "name": "Python",
+            "is_official": false,
+            "is_same": true
+          },
+          "es": {
+            "name": "Python",
+            "is_official": false,
+            "is_same": true
+          },
+          "ja": {
+            "name": "パイソン",
+            "transcription": "ピートン",
+            "is_official": false,
+            "is_same": true
+          }
+        },
+        "status": "operating",
+        "type": "attraction",
+        "area": "Ruigrijk",
+        "externalId": "python",
+        "waitTime": 40,
+        "singleRider": {
+          "available": true,
+          "status": "closed",
+          "waitTime": null
+        }
+      },
+      {
+        "name": "Symbolica",
+        "translations": {
+          "en": {
+            "name": "Symbolica",
+            "is_official": false,
+            "is_same": true
+          },
+          "de": {
+            "name": "Symbolica",
+            "is_official": false,
+            "is_same": true
+          },
+          "fr": {
+            "name": "Symbolica",
+            "is_official": false,
+            "is_same": true
+          },
+          "es": {
+            "name": "Symbolica",
+            "is_official": false,
+            "is_same": true
+          },
+          "ja": {
+            "name": "シンボリカ",
+            "transcription": "シンボリカ",
+            "is_official": false,
+            "is_same": true
+          }
+        },
+        "status": "operating",
+        "type": "attraction",
+        "area": "Fantasierijk",
+        "externalId": "symbolica",
+        "waitTime": 30,
+        "singleRider": {
+          "available": true,
+          "status": "closed",
+          "waitTime": 5
+        }
+      },
+      {
+        "name": "Max & Moritz",
+        "translations": {
+          "en": {
+            "name": "Max & Moritz",
+            "is_official": false,
+            "is_same": true
+          },
+          "de": {
+            "name": "Max & Moritz",
+            "is_official": false,
+            "is_same": true
+          },
+          "fr": {
+            "name": "Max & Moritz",
+            "is_official": false,
+            "is_same": true
+          },
+          "es": {
+            "name": "Max y Moritz",
+            "is_official": false,
+            "is_same": true
+          },
+          "ja": {
+            "name": "マックスとモーリッツ",
+            "transcription": "マックス・モリッツ",
+            "is_official": false,
+            "is_same": true
+          }
+        },
+        "status": "operating",
+        "type": "attraction",
+        "area": "Anderrijk",
+        "externalId": "maxmoritz",
+        "waitTime": 20,
+        "singleRider": {
+          "available": true,
+          "status": "closed",
+          "waitTime": 15
+        }
+      },
+      {
+        "name": "Vogel Rok",
+        "translations": {
+          "en": {
+            "name": "Bird Rok",
+            "is_official": false,
+            "is_same": true
+          },
+          "de": {
+            "name": "Vogel Rok",
+            "is_official": false,
+            "is_same": true
+          },
+          "fr": {
+            "name": "Oiseau Rok",
+            "is_official": false,
+            "is_same": true
+          },
+          "es": {
+            "name": "Pájaro Rok",
+            "is_official": false,
+            "is_same": true
+          },
+          "ja": {
+            "name": "鳥のロック",
+            "transcription": "フォーヘル・ロック",
+            "is_official": false,
+            "is_same": true
+          }
+        },
+        "status": "operating",
+        "type": "attraction",
+        "area": "Reizenrijk",
+        "externalId": "vogelrok",
+        "waitTime": 30,
+        "singleRider": {
+          "available": false,
+          "status": null,
+          "waitTime": null
+        }
+      },
+      {
+        "name": "Joris en de Draak",
+        "translations": {
+          "en": {
+            "name": "George and the Dragon",
+            "is_official": false,
+            "is_same": false
+          },
+          "de": {
+            "name": "Joris und der Drache",
+            "is_official": false,
+            "is_same": false
+          },
+          "fr": {
+            "name": "Georges et le Dragon",
+            "is_official": false,
+            "is_same": false
+          },
+          "es": {
+            "name": "Jorge y el Dragón",
+            "is_official": false,
+            "is_same": false
+          },
+          "ja": {
+            "name": "ジョリスとドラゴン",
+            "transcription": "ヨリス・エン・デ・ドラーク",
+            "is_official": false,
+            "is_same": false
+          }
+        },
+        "status": "operating",
+        "type": "attraction",
+        "area": "Ruigrijk",
+        "externalId": "jorisendedraak",
+        "waitTime": 35,
+        "singleRider": {
+          "available": true,
+          "status": "closed",
+          "waitTime": 15
+        }
+      }
+    ],
+    "shows": [
+      {
+        "name": "CARO, a wonderful Efteling show",
+        "translations": {
+          "en": {
+            "name": "CARO, a wonderful Efteling show",
+            "is_official": false,
+            "is_same": true
+          },
+          "de": {
+            "name": "CARO, a wonderful Efteling show",
+            "is_official": false,
+            "is_same": true
+          }
+        },
+        "status": "closed",
+        "type": "show",
+        "area": null,
+        "externalId": "caro",
+        "schedule": []
+      },
+      {
+        "name": "Jokie en Jet",
+        "translations": {
+          "en": {
+            "name": "Jokie en Jet",
+            "is_official": false,
+            "is_same": true
+          },
+          "de": {
+            "name": "Jokie en Jet",
+            "is_official": false,
+            "is_same": true
+          }
+        },
+        "status": "closed",
+        "type": "show",
+        "area": null,
+        "externalId": "jokieenjet",
+        "schedule": []
+      },
+      {
+        "name": "Efteling inhabitants",
+        "translations": {
+          "en": {
+            "name": "Efteling inhabitants",
+            "is_official": false,
+            "is_same": true
+          },
+          "de": {
+            "name": "Efteling inhabitants",
+            "is_official": false,
+            "is_same": true
+          }
+        },
+        "status": "closed",
+        "type": "show",
+        "area": null,
+        "externalId": "ontmoeteftelingbewoners",
+        "schedule": []
+      },
+      {
+        "name": "Pardoes the magician",
+        "translations": {
+          "en": {
+            "name": "Pardoes the magician",
+            "is_official": false,
+            "is_same": true
+          },
+          "de": {
+            "name": "Pardoes the magician",
+            "is_official": false,
+            "is_same": true
+          }
+        },
+        "status": "closed",
+        "type": "show",
+        "area": null,
+        "externalId": "pardoesdetovernar",
+        "schedule": []
+      },
+      {
+        "name": "Sprookjesboomshow",
+        "translations": {
+          "en": {
+            "name": "Sprookjesboomshow",
+            "is_official": false,
+            "is_same": true
+          },
+          "de": {
+            "name": "Sprookjesboomshow",
+            "is_official": false,
+            "is_same": true
+          }
+        },
+        "status": "closed",
+        "type": "show",
+        "area": null,
+        "externalId": "sprookjesboomerwaseens",
+        "schedule": []
+      },
+      {
+        "name": "The Fairytale Collector",
+        "translations": {
+          "en": {
+            "name": "The Fairytale Collector",
+            "is_official": false,
+            "is_same": true
+          },
+          "de": {
+            "name": "The Fairytale Collector",
+            "is_official": false,
+            "is_same": true
+          }
+        },
+        "status": "operating",
+        "type": "show",
+        "area": null,
+        "externalId": "sprookjessprokkelaar",
+        "schedule": []
+      },
+      {
+        "name": "Virginie and Otto Charlatan",
+        "translations": {
+          "en": {
+            "name": "Virginie and Otto Charlatan",
+            "is_official": false,
+            "is_same": true
+          },
+          "de": {
+            "name": "Virginie and Otto Charlatan",
+            "is_official": false,
+            "is_same": true
+          }
+        },
+        "status": "closed",
+        "type": "show",
+        "area": null,
+        "externalId": "virginieenottocharlatan",
+        "schedule": []
+      },
+      {
+        "name": "Raveleijn",
+        "translations": {
+          "en": {
+            "name": "Raveleijn",
+            "is_official": false,
+            "is_same": true
+          },
+          "de": {
+            "name": "Raveleijn",
+            "is_official": false,
+            "is_same": true
+          }
+        },
+        "status": "operating",
+        "type": "show",
+        "area": null,
+        "externalId": "raveleijn",
+        "schedule": []
+      },
+      {
+        "name": "Anton Pieckplein puppet theatre",
+        "translations": {
+          "en": {
+            "name": "Anton Pieckplein puppet theatre",
+            "is_official": false,
+            "is_same": true
+          },
+          "de": {
+            "name": "Anton Pieckplein puppet theatre",
+            "is_official": false,
+            "is_same": true
+          }
+        },
+        "status": "closed",
+        "type": "show",
+        "area": null,
+        "externalId": "antonpieckpleinpoppenkasttheater",
+        "schedule": []
+      },
+      {
+        "name": "Aquanura",
+        "translations": {
+          "en": {
+            "name": "Aquanura",
+            "is_official": false,
+            "is_same": true
+          },
+          "de": {
+            "name": "Aquanura",
+            "is_official": false,
+            "is_same": true
+          },
+          "fr": {
+            "name": "Aquanura",
+            "is_official": false,
+            "is_same": true
+          },
+          "es": {
+            "name": "Aquanura",
+            "is_official": false,
+            "is_same": true
+          },
+          "ja": {
+            "name": "アクアヌラ",
+            "transcription": "アクアヌラ",
+            "is_official": false,
+            "is_same": true
+          }
+        },
+        "status": "operating",
+        "type": "show",
+        "area": "Pardoes Promenade",
+        "externalId": "aquanura",
+        "schedule": []
+      }
+    ]
+  }
+}

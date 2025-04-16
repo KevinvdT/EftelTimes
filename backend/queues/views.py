@@ -9,7 +9,7 @@ from pathlib import Path
 from .entity_data import ENTITY_INFO, EXCLUDED_ENTITIES
 
 # Settings
-USE_DUMMY_DATA = True  # Set to False to use the real API
+USE_DUMMY_DATA = False  # Set to False to use the real API
 DEBUG = True  # Set to True to disable caching during development
 
 # API Configuration

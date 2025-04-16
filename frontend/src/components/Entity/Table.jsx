@@ -16,16 +16,45 @@ const AreaTitle = styled.h2`
   }
 `;
 
+const TableHeader = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 1.25rem 0.5rem 1.25rem;
+`;
+
+const SingleRiderLabel = styled.div`
+  color: #6C4839;
+  font-size: 10px;
+  font-weight: 700;
+  text-align: right;
+  line-height: 1;
+`;
+
 // FUTURE: Planned features
 // - Add user controlled sorting (by name, wait time, status)
 // - Add sort direction toggle (asc/desc)
 // - Add sort indicators in column headers
 const Table = ({ area, entities }) => {
-  const sortedEntities = [...entities].sort((a, b) => a.name.localeCompare(b.name));
+  console.log('Before sorting:', entities.map(e => e.name));
+
+  const sortedEntities = [...entities].sort((a, b) =>
+    a.name.localeCompare(b.name, 'nl', {
+      sensitivity: 'base',
+      ignorePunctuation: true
+    })
+  );
+
+  console.log('After sorting:', sortedEntities.map(e => e.name));
 
   return (
     <Section>
-      <AreaTitle>{area}</AreaTitle>
+      {area && <AreaTitle>{area}</AreaTitle>}
+      <TableHeader>
+        <SingleRiderLabel>
+          SINGLE<br />
+          RIDER
+        </SingleRiderLabel>
+      </TableHeader>
       {sortedEntities.map((entity, index) => (
         <Row
           key={entity.name}

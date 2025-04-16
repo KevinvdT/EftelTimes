@@ -56,7 +56,7 @@ const HiddenZero = styled.span`
 `;
 
 const EntityRow = ({ name, waitTime, singleRider, status, isEven }) => {
-  const isOpen = !status && waitTime !== undefined;
+  const hasNumericWaitTime = typeof waitTime === 'number';
 
   const formatTime = (time) => {
     if (time < 10) {
@@ -74,7 +74,7 @@ const EntityRow = ({ name, waitTime, singleRider, status, isEven }) => {
     <Row isEven={isEven}>
       <Name>{name}</Name>
       <RightSection>
-        {isOpen ? (
+        {hasNumericWaitTime ? (
           <WaitTime>
             <TimeValue>{formatTime(waitTime)}</TimeValue>
             <TimeUnit>MIN</TimeUnit>
@@ -86,7 +86,7 @@ const EntityRow = ({ name, waitTime, singleRider, status, isEven }) => {
           {singleRider !== undefined && (
             <>
               <TimeValue>{formatTime(singleRider)}</TimeValue>
-              <TimeUnit>MIN</TimeUnit>
+              {typeof singleRider === 'number' && <TimeUnit>MIN</TimeUnit>}
             </>
           )}
         </WaitTime>
