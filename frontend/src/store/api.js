@@ -2,9 +2,10 @@ import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 
 const STATUS_MESSAGES = {
   operating: undefined, // No message needed when operating
-  closed: 'Dicht',
+  closed: 'Gesloten',
   maintenance: 'Storing',
-  refurbishment: 'Onderhoud'
+  refurbishment: 'Onderhoud',
+  down: 'Storing',
 };
 
 export const api = createApi({
@@ -22,7 +23,14 @@ export const api = createApi({
         }));
       },
     }),
+    getOpeningHours: builder.query({
+      query: () => 'api/v1/opening-hours/',
+      pollingInterval: 60000, // Poll every minute to keep time accurate
+    }),
   }),
 });
 
-export const { useGetQueueTimesQuery } = api; 
+export const {
+  useGetQueueTimesQuery,
+  useGetOpeningHoursQuery,
+} = api; 

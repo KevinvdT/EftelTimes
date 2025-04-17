@@ -6,6 +6,11 @@ from django.views.decorators.cache import cache_page
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from pathlib import Path
+from datetime import datetime, timedelta
+from zoneinfo import ZoneInfo
+from django.core.cache import cache
+from django.utils.decorators import method_decorator
+from functools import wraps
 from .entity_data import ENTITY_INFO, EXCLUDED_ENTITIES
 
 # Settings
@@ -15,6 +20,7 @@ DEBUG = True  # Set to True to disable caching during development
 # API Configuration
 EFTELING_ID = "30713cf6-69a9-47c9-a505-52bb965f01be"
 THEMEPARKS_API_URL = f"https://api.themeparks.wiki/v1/entity/{EFTELING_ID}/live"
+THEMEPARKS_HOURS_URL = f"https://api.themeparks.wiki/v1/entity/{EFTELING_ID}/schedule"
 
 # Path to dummy data
 DUMMY_DATA_PATH = Path(__file__).parent / "dummydata.json"
@@ -153,4 +159,76 @@ def queue_times(request):
         return Response({
             "error": "Failed to fetch queue times",
             "detail": str(e)
+        }, status=503)  # Service Unavailable
+
+def cache_until_midnight(view_func):
+    """Cache the view until midnight Amsterdam time."""
+    @wraps(view_func)
+    def wrapped_view(request, *args, **kwargs):
+        # Get Amsterdam timezone
+        tz = ZoneInfo('Europe/Amsterdam')
+        now = datetime.now(tz)
+        
+        # Calculate time until midnight
+        midnight = (now + timedelta(days=1)).replace(
+            hour=0, minute=0, second=0, microsecond=0
+        )
+        seconds_until_midnight = int((midnight - now).total_seconds())
+        
+        # Create a cache key that includes the date
+        cache_key = f'opening_hours_{now.date().isoformat()}'
+        
+        # Try to get from cache
+        response_data = cache.get(cache_key)
+        if response_data is not None and not DEBUG:
+            return Response(response_data)
+        
+        # If not in cache, call the view function
+        response = view_func(request, *args, **kwargs)
+        
+        # Cache the response data until midnight
+        if not DEBUG:
+            cache.set(cache_key, response.data, seconds_until_midnight)
+        
+        return response
+    
+    return wrapped_view
+
+@api_view(['GET'])
+@cache_until_midnight
+def opening_hours(request):
+    """Fetch and return today's and tomorrow's park opening hours."""
+    try:
+        # Fetch data from ThemeParks API
+        response = requests.get(THEMEPARKS_HOURS_URL)
+        response.raise_for_status()
+        data = response.json()
+
+        # Get current date in park's timezone
+        tz = ZoneInfo(data.get('timezone', 'Europe/Amsterdam'))
+        current_date = datetime.now(tz).date()
+        tomorrow_date = current_date + timedelta(days=1)
+
+        # Find today's and tomorrow's opening hours
+        schedule = data.get('schedule', [])
+        today_hours = next(
+            (s for s in schedule if s['date'] == current_date.isoformat()),
+            None
+        )
+        tomorrow_hours = next(
+            (s for s in schedule if s['date'] == tomorrow_date.isoformat()),
+            None
+        )
+
+        return Response({
+            'today': today_hours,
+            'tomorrow': tomorrow_hours,
+            'timezone': data.get('timezone'),
+            'last_updated': timezone.now().isoformat()
+        })
+
+    except requests.RequestException as e:
+        return Response({
+            'error': 'Failed to fetch opening hours',
+            'detail': str(e)
         }, status=503)  # Service Unavailable

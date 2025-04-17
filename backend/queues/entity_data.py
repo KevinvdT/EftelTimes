@@ -1171,10 +1171,12 @@ EXCLUDED_ENTITIES = [
     "diorama",  # Diorama
     "eftelingmuseum",  # Efteling Museum
     "kindervreugd",  # Kindervreugd
-    # "carrouselsantonpieckplein",  # Carrousel Anton Pieckplein
+    "carrouselsantonpieckplein",  # Carrousel Anton Pieckplein
     "speelbosnest",  # Speelbos Nest
     # "kinderspoor",  # Kinderspoor
     "kleuterhof",  # Kleuterhof
     "archipel",  # Archipel
+    "sprookjesbos",  # Sprookjesbos
     # "dezeszwanenrondvaart",  # De Zes Zwanen Rondvaart
+    "volkvanlaaf",  # Volk van Laaf
 ] 
