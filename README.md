@@ -106,31 +106,26 @@ USE_DUMMY_DATA=True  # Set to False for real API
   - [x] Time display component
   - [x] Status indicator component
   - [x] Entity row component
-- [ ] Additional UI components:
-  - [ ] Tag components for status/type
-  - [ ] Card components for attraction details
-  - [ ] Loading and error state components
-  - [ ] Toggle and button components
+- [x] Additional UI components:
+  - [x] Tag components for status/type
+  - [x] Card components for attraction details
+  - [x] Loading and error state components
+
 
 #### Layout Components
 - [x] Create layout components:
   - [x] Page container with consistent spacing
-  - [x] Header component
-- [ ] Additional layout components:
-  - [ ] Footer component
-  - [ ] Navigation component
-  - [ ] Responsive grid system
-  - [ ] Section container components
+  - [x] Header component with park status
+  - [x] Responsive grid system
+  - [x] Footer component
+  - [x] Section container components
 
 #### Page Components
 - [x] HomePage component:
   - [x] Data fetching and state management
   - [x] Layout assembly
   - [x] UI component integration
-- [ ] Additional page components:
-  - [ ] Attraction detail page
-  - [ ] Settings page
-  - [ ] About page
+  - [x] Responsive design
 
 ### 🔌 Phase 3: API Integration
 - [x] Switch from Python wrapper to direct ThemeParks API usage
@@ -140,21 +135,43 @@ USE_DUMMY_DATA=True  # Set to False for real API
 - [x] Cache backend response for 60 seconds
 - [x] Connect frontend to live data using RTK Query
 - [x] Transform API data for frontend consumption
+- [x] Add opening hours endpoint and integration
+- [x] Handle timezone differences correctly
 
 ### 🧠 Phase 4: UX & State Features
-- [ ] Add toggle for grouping by area
-- [ ] Default: **grouped on desktop**, **flat on mobile**
-- [ ] Implement global state for queue data
-- [ ] Add loading and error handling
-- [ ] Optional: search/filter, dark mode
+- [x] Add loading and error handling
+- [x] Implement global state for queue data
+- [x] Smart status display based on park hours
 
 ### 🚀 Phase 5: Final Touches & Deployment
-- [ ] Add favicon and page title
+- [x] Add favicon and page title
 - [ ] Add legal/fan disclaimer in the footer
-- [ ] Optimize layout for mobile
+- [x] Optimize layout for mobile
 - [ ] Deploy backend to VPS with Nginx
 - [ ] Deploy frontend (same VPS or static host)
 - [ ] Connect domain: `eftelingwachttijden.nl`
+
+### 🎯 Phase 6: Future Improvements
+- [ ] Toggle and button components
+- [ ] Add toggle for grouping by area
+- [ ] Default: **grouped on desktop**, **flat on mobile**
+- [ ] Favoriting functionality
+- [ ] Search/filter functionality
+- [ ] Dark mode support
+- [ ] Winter theme
+- [ ] Internationalization:
+  - [ ] English version
+  - [ ] Language switcher
+  - [ ] Automatic language detection
+- [ ] German localization
+- [ ] Additional pages:
+  - [ ] Attraction detail pages with history
+  - [ ] Settings page for preferences
+  - [ ] About page with project info
+- [ ] Improved data visualization:
+  - [ ] Wait time trends
+  - [ ] Peak hours indication
+  - [ ] Historical data analysis
 
 ## License
 

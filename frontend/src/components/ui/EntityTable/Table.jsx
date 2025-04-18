@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import Row from './Row';
+import { useGetOpeningHoursQuery } from '../../../store/api';
 
 const Section = styled.section`
   margin-bottom: 2rem;
@@ -62,7 +63,10 @@ const Column = styled.div`
 // - Add sort direction toggle (asc/desc)
 // - Add sort indicators in column headers
 const Table = ({ area, entities }) => {
-  console.log('Before sorting:', entities.map(e => e.name));
+  const { data: openingHours } = useGetOpeningHoursQuery();
+
+  // Determine if park is closed based on opening hours
+  const isParkClosed = !openingHours?.today || new Date() < new Date(openingHours.today.openingTime) || new Date() > new Date(openingHours.today.closingTime);
 
   const sortedEntities = [...entities].sort((a, b) =>
     a.name.localeCompare(b.name, 'nl', {
@@ -70,8 +74,6 @@ const Table = ({ area, entities }) => {
       ignorePunctuation: true
     })
   );
-
-  console.log('After sorting:', sortedEntities.map(e => e.name));
 
   // Calculate the midpoint to split the list evenly
   const midPoint = Math.ceil(sortedEntities.length / 2);
@@ -83,12 +85,14 @@ const Table = ({ area, entities }) => {
       {area && <AreaTitle>{area}</AreaTitle>}
       <GridLayout>
         <Column>
-          <TableHeader>
-            <SingleRiderLabel>
-              SINGLE<br />
-              RIDER
-            </SingleRiderLabel>
-          </TableHeader>
+          {!isParkClosed && (
+            <TableHeader>
+              <SingleRiderLabel>
+                SINGLE<br />
+                RIDER
+              </SingleRiderLabel>
+            </TableHeader>
+          )}
           {firstColumn.map((entity, index) => (
             <Row
               key={entity.name}
@@ -97,16 +101,19 @@ const Table = ({ area, entities }) => {
               singleRider={entity.singleRider}
               status={entity.status}
               isEven={index % 2 === 0}
+              isParkClosed={isParkClosed}
             />
           ))}
         </Column>
         <Column>
-          <TableHeader>
-            <SecondColumnSingleRiderLabel>
-              SINGLE<br />
-              RIDER
-            </SecondColumnSingleRiderLabel>
-          </TableHeader>
+          {!isParkClosed && (
+            <TableHeader>
+              <SecondColumnSingleRiderLabel>
+                SINGLE<br />
+                RIDER
+              </SecondColumnSingleRiderLabel>
+            </TableHeader>
+          )}
           {secondColumn.map((entity, index) => (
             <Row
               key={entity.name}
@@ -115,6 +122,7 @@ const Table = ({ area, entities }) => {
               singleRider={entity.singleRider}
               status={entity.status}
               isEven={index % 2 === 0}
+              isParkClosed={isParkClosed}
             />
           ))}
         </Column>

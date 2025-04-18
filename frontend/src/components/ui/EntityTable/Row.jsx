@@ -12,11 +12,38 @@ const Row = styled.div`
 const Name = styled.div`
   color: #6C4839;
   font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+`;
+
+const AreaIndicator = styled.div`
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: ${props => {
+    switch (props.area) {
+      case 'Marerijk':
+        return '#6C4839'; // Brown
+      case 'Ruigrijk':
+        return '#A12020'; // Red
+      case 'Anderrijk':
+        return '#365B37'; // Green
+      case 'Reizenrijk':
+        return '#1E3A8A'; // Blue
+      case 'Fantasierijk':
+        return '#7E22CE'; // Purple
+      case 'Pardoes Promenade':
+        return '#B45309'; // Orange
+      default:
+        return '#6C4839'; // Default brown
+    }
+  }};
 `;
 
 const RightSection = styled.div`
   display: grid;
-  grid-template-columns: 45px 45px;
+  grid-template-columns: ${props => props.isParkClosed ? '90px' : '45px 45px'};
   gap: 1.5rem;
   justify-content: end;
   align-items: center;
@@ -45,16 +72,19 @@ const TimeUnit = styled.span`
 `;
 
 const Status = styled.div`
-  color: #A12020;
+  color: ${props => props.isParkClosed && props.status === 'Gesloten' ? '#6C4839' : '#A12020'};
+  opacity: ${props => props.isParkClosed && props.status === 'Gesloten' ? 0.5 : 1};
   font-weight: 700;
-  justify-self: start;
+  justify-self: ${props => props.isParkClosed ? 'end' : 'start'};
+  text-align: ${props => props.isParkClosed ? 'right' : 'left'};
+  padding-right: ${props => props.isParkClosed ? '0.25rem' : '0'};
 `;
 
 const HiddenZero = styled.span`
   opacity: 0;
 `;
 
-const EntityRow = ({ name, waitTime, singleRider, status, isEven }) => {
+const EntityRow = ({ name, waitTime, singleRider, status, isEven, isParkClosed, area }) => {
   const hasNumericWaitTime = typeof waitTime === 'number';
 
   const formatTime = (time) => {
@@ -71,24 +101,25 @@ const EntityRow = ({ name, waitTime, singleRider, status, isEven }) => {
 
   return (
     <Row isEven={isEven}>
-      <Name>{name}</Name>
-      <RightSection>
+      <Name>
+        <AreaIndicator area={area} />
+        {name}
+      </Name>
+      <RightSection isParkClosed={isParkClosed}>
         {hasNumericWaitTime ? (
           <WaitTime>
             <TimeValue>{formatTime(waitTime)}</TimeValue>
             <TimeUnit>MIN</TimeUnit>
           </WaitTime>
         ) : (
-          <Status>{status}</Status>
+          <Status isParkClosed={isParkClosed} status={status}>{status}</Status>
         )}
-        <WaitTime>
-          {singleRider !== undefined && (
-            <>
-              <TimeValue>{formatTime(singleRider)}</TimeValue>
-              {typeof singleRider === 'number' && <TimeUnit>MIN</TimeUnit>}
-            </>
-          )}
-        </WaitTime>
+        {!isParkClosed && singleRider !== undefined && (
+          <WaitTime>
+            <TimeValue>{formatTime(singleRider)}</TimeValue>
+            {typeof singleRider === 'number' && <TimeUnit>MIN</TimeUnit>}
+          </WaitTime>
+        )}
       </RightSection>
     </Row>
   );

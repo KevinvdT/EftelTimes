@@ -14,6 +14,7 @@ export const api = createApi({
   endpoints: (builder) => ({
     getQueueTimes: builder.query({
       query: () => 'api/v1/queues/',
+      pollingInterval: 60000, // Poll every minute to keep queue times up-to-date
       transformResponse: (response) => {
         return response.entities.attractions.map(entity => ({
           name: entity.name,
@@ -25,7 +26,7 @@ export const api = createApi({
     }),
     getOpeningHours: builder.query({
       query: () => 'api/v1/opening-hours/',
-      pollingInterval: 60000, // Poll every minute to keep time accurate
+      pollingInterval: 3600000, // Poll once per hour (60 minutes * 60 seconds * 1000ms)
     }),
   }),
 });

@@ -72,7 +72,9 @@ def transform_entity(data):
             # Check for single rider queue
             if "SINGLE_RIDER" in data["queue"]:
                 result["singleRider"]["available"] = True
-                result["singleRider"]["status"] = data["queue"]["SINGLE_RIDER"].get("status", "CLOSED").lower()
+                # If single rider queue exists, default to "OPERATING" unless explicitly marked as closed
+                status = data["queue"]["SINGLE_RIDER"].get("status", "OPERATING").lower()
+                result["singleRider"]["status"] = status
                 if data["queue"]["SINGLE_RIDER"].get("waitTime") is not None:
                     result["singleRider"]["waitTime"] = data["queue"]["SINGLE_RIDER"]["waitTime"]
 

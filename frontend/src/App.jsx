@@ -12,6 +12,16 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
   }
+
+  ::selection {
+    background-color: #6C4839;
+    color: #FEF7EE;
+  }
+
+  ::-moz-selection {
+    background-color: #6C4839;
+    color: #FEF7EE;
+  }
 `;
 
 const AppContainer = styled.div`

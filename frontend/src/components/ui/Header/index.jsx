@@ -42,7 +42,7 @@ const HeaderWrapper = styled.header`
       rgba(255, 255, 255, 0.4) 0%,
       rgba(255, 255, 255, 0) 60%
     );
-    animation: ${moveLight} 30s ease-in-out infinite;
+    animation: ${moveLight} 60s ease-in-out infinite;
     pointer-events: none;
   }
 `;
@@ -90,19 +90,27 @@ const Emphasis = styled.em`
   text-transform: uppercase;
 `;
 
+const formatTime = (date) => {
+  return date.toLocaleString('nl-NL', {
+    hour: '2-digit',
+    minute: '2-digit',
+    timeZone: 'Europe/Amsterdam'
+  }) + ' uur';
+};
+
 const useOpeningStatus = (openingHoursData) => {
   return useMemo(() => {
     if (!openingHoursData) {
-      return { message: "Laden...", isOpen: false, isLoading: true };
+      return { message: null, isOpen: false, isLoading: true };
     }
 
     const { today, tomorrow, timezone } = openingHoursData;
     if (!today && !tomorrow) {
-      return { message: "Openingstijden niet beschikbaar", isOpen: false, isLoading: false };
+      return { message: null, isOpen: false, isLoading: false };
     }
 
-    const now = new Date();
-    const tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
+    // Get current time in park's timezone
+    const parkDate = new Date(new Date().toLocaleString('en-US', { timeZone: timezone }));
 
     if (!today) {
       const tomorrowOpen = new Date(tomorrow.openingTime);
@@ -110,7 +118,7 @@ const useOpeningStatus = (openingHoursData) => {
       return {
         message: (
           <>
-            Het park is nu <Emphasis>gesloten</Emphasis> en gaat morgen om <Emphasis>{tomorrowOpen.getHours()}:00 uur</Emphasis> open
+            Het park is nu <Emphasis>gesloten</Emphasis> en gaat morgen om <Emphasis>{formatTime(tomorrowOpen)}</Emphasis> open
           </>
         ),
         isOpen: false,
@@ -121,11 +129,23 @@ const useOpeningStatus = (openingHoursData) => {
     const openTime = new Date(today.openingTime);
     const closeTime = new Date(today.closingTime);
 
-    if (now < openTime) {
+    // Compare hours and minutes for more accurate comparison
+    const parkHours = parkDate.getHours();
+    const parkMinutes = parkDate.getMinutes();
+    const openHours = openTime.getHours();
+    const openMinutes = openTime.getMinutes();
+    const closeHours = closeTime.getHours();
+    const closeMinutes = closeTime.getMinutes();
+
+    const parkTimeInMinutes = parkHours * 60 + parkMinutes;
+    const openTimeInMinutes = openHours * 60 + openMinutes;
+    const closeTimeInMinutes = closeHours * 60 + closeMinutes;
+
+    if (parkTimeInMinutes < openTimeInMinutes) {
       return {
         message: (
           <>
-            Het park is nu <Emphasis>gesloten</Emphasis> en gaat vandaag om <Emphasis>{openTime.getHours()}:00 uur</Emphasis> open
+            Het park is nu <Emphasis>gesloten</Emphasis> en gaat vandaag om <Emphasis>{formatTime(openTime)}</Emphasis> open
           </>
         ),
         isOpen: false,
@@ -133,13 +153,13 @@ const useOpeningStatus = (openingHoursData) => {
       };
     }
 
-    if (now > closeTime) {
+    if (parkTimeInMinutes >= closeTimeInMinutes) {
       if (tomorrow) {
         const tomorrowOpen = new Date(tomorrow.openingTime);
         return {
           message: (
             <>
-              Het park is nu <Emphasis>gesloten</Emphasis> en gaat morgen om <Emphasis>{tomorrowOpen.getHours()}:00 uur</Emphasis> open
+              Het park is nu <Emphasis>gesloten</Emphasis> en gaat morgen om <Emphasis>{formatTime(tomorrowOpen)}</Emphasis> open
             </>
           ),
           isOpen: false,
@@ -160,7 +180,7 @@ const useOpeningStatus = (openingHoursData) => {
     return {
       message: (
         <>
-          Het park is nu <Emphasis>geopend</Emphasis> tot <Emphasis>{closeTime.getHours()}:00 uur</Emphasis>
+          Het park is nu <Emphasis>geopend</Emphasis> tot <Emphasis>{formatTime(closeTime)}</Emphasis>
         </>
       ),
       isOpen: true,
@@ -184,11 +204,13 @@ const Header = () => {
           />
         </Logo>
       </HeaderWrapper>
-      <StatusBarWrapper>
-        <StatusBar isOpen={!error && isOpen} isLoading={isLoading}>
-          {error ? "Kan openingstijden niet laden" : message}
-        </StatusBar>
-      </StatusBarWrapper>
+      {message && (
+        <StatusBarWrapper>
+          <StatusBar isOpen={!error && isOpen} isLoading={isLoading}>
+            {error ? null : message}
+          </StatusBar>
+        </StatusBarWrapper>
+      )}
     </>
   );
 };
