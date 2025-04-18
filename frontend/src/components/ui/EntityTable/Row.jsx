@@ -12,33 +12,6 @@ const Row = styled.div`
 const Name = styled.div`
   color: #6C4839;
   font-weight: 700;
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-`;
-
-const AreaIndicator = styled.div`
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background-color: ${props => {
-    switch (props.area) {
-      case 'Marerijk':
-        return '#6C4839'; // Brown
-      case 'Ruigrijk':
-        return '#A12020'; // Red
-      case 'Anderrijk':
-        return '#365B37'; // Green
-      case 'Reizenrijk':
-        return '#1E3A8A'; // Blue
-      case 'Fantasierijk':
-        return '#7E22CE'; // Purple
-      case 'Pardoes Promenade':
-        return '#B45309'; // Orange
-      default:
-        return '#6C4839'; // Default brown
-    }
-  }};
 `;
 
 const RightSection = styled.div`
@@ -84,7 +57,7 @@ const HiddenZero = styled.span`
   opacity: 0;
 `;
 
-const EntityRow = ({ name, waitTime, singleRider, status, isEven, isParkClosed, area }) => {
+const EntityRow = ({ name, waitTime, singleRider, status, isEven, isParkClosed }) => {
   const hasNumericWaitTime = typeof waitTime === 'number';
 
   const formatTime = (time) => {
@@ -101,10 +74,7 @@ const EntityRow = ({ name, waitTime, singleRider, status, isEven, isParkClosed, 
 
   return (
     <Row isEven={isEven}>
-      <Name>
-        <AreaIndicator area={area} />
-        {name}
-      </Name>
+      <Name>{name}</Name>
       <RightSection isParkClosed={isParkClosed}>
         {hasNumericWaitTime ? (
           <WaitTime>
