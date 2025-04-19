@@ -69,6 +69,4 @@ htmlcov/
 
 # Cache
 .cache/
-.parcel-cache/ 
-# Django cache
-*.djcache
+.parcel-cache/ *.djcache
