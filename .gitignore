@@ -69,4 +69,4 @@ htmlcov/
 
 # Cache
 .cache/
-.parcel-cache/ 
+.parcel-cache/ *.djcache
