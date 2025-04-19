@@ -70,3 +70,4 @@ htmlcov/
 # Cache
 .cache/
 .parcel-cache/ *.djcache
+backend/cache/
