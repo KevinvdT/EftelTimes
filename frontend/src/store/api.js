@@ -10,7 +10,7 @@ const STATUS_MESSAGES = {
 
 export const api = createApi({
   reducerPath: 'api',
-  baseQuery: fetchBaseQuery({ baseUrl: 'http://localhost:8000' }),
+  baseQuery: fetchBaseQuery({ baseUrl: "/" }),
   endpoints: (builder) => ({
     getQueueTimes: builder.query({
       query: () => 'api/v1/queues/',

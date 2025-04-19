@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-0d^9m3mh)5v#sd(^l@@$g#-hl%p-wrf!l4-x(hr89t!c2&ck1a'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["efteling.kevinvandertoorn.com", "localhost"]
 
 
 # Application definition
@@ -125,7 +125,7 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOWED_ORIGINS = ["https://efteling.kevinvandertoorn.com"]
 
 CACHES = {
     "default": {
@@ -144,3 +144,5 @@ REST_FRAMEWORK = {
         'user': '1000/day'    # 1000 requests per day for authenticated users
     }
 }
+
+STATIC_ROOT = BASE_DIR / 'static'
