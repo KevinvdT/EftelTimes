@@ -8,9 +8,14 @@ const STATUS_MESSAGES = {
   down: 'Storing',
 };
 
+// Use different base URL in development
+const baseUrl = process.env.NODE_ENV === 'development'
+  ? 'http://localhost:8000/'  // Development server URL
+  : '/';  // Production URL
+
 export const api = createApi({
   reducerPath: 'api',
-  baseQuery: fetchBaseQuery({ baseUrl: "/" }),
+  baseQuery: fetchBaseQuery({ baseUrl }),
   endpoints: (builder) => ({
     getQueueTimes: builder.query({
       query: () => 'api/v1/queues/',

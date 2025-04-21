@@ -65,8 +65,10 @@ const useOpeningStatus = (openingHoursData) => {
     }
 
     // Get current time in park's timezone
-    // const parkDate = new Date(new Date().toLocaleString('en-US', { timeZone: timezone }));
-    const parkDate = new Date('2025-04-19T20:59:00');
+    const parkDate = new Date(new Date().toLocaleString('en-US', { timeZone: timezone }));
+
+    // For testing purposes, use a fixed date:
+    // const parkDate = new Date('2025-04-19T20:59:00');
 
     if (!today) {
       const tomorrowOpen = new Date(tomorrow.openingTime);

@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -23,9 +24,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-0d^9m3mh)5v#sd(^l@@$g#-hl%p-wrf!l4-x(hr89t!c2&ck1a'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = os.environ.get('DJANGO_DEBUG', 'False').lower() == 'true'
 
-ALLOWED_HOSTS = ["efteling.kevinvandertoorn.com", "localhost"]
+# Allow all hosts in debug mode, otherwise restrict to production domain
+ALLOWED_HOSTS = ["efteling.kevinvandertoorn.com"] if not DEBUG else ["*"]
 
 
 # Application definition
@@ -125,7 +127,24 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-CORS_ALLOWED_ORIGINS = ["https://efteling.kevinvandertoorn.com"]
+CORS_ALLOWED_ORIGINS = [
+    "https://efteling.kevinvandertoorn.com",
+]
+
+# In development, allow any localhost port
+if DEBUG:
+    CORS_ALLOWED_ORIGINS.append("http://localhost:3000")  # Default React port
+    CORS_ALLOWED_ORIGINS.append("http://127.0.0.1:3000")  # Default React port (alternative)
+    CORS_ALLOW_ALL_ORIGINS = True  # This will allow any origin in development
+
+# Disable credentials since we're serving public data
+CORS_ALLOW_CREDENTIALS = False
+
+# Allow all headers and methods in development
+if DEBUG:
+    CORS_ALLOW_ALL_ORIGINS = True
+    CORS_ALLOW_HEADERS = ['*']
+    CORS_ALLOW_METHODS = ['*']
 
 CACHES = {
     "default": {
