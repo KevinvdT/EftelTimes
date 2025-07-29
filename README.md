@@ -149,7 +149,6 @@ USE_DUMMY_DATA=True  # Set to False for real API
 - [x] Optimize layout for mobile
 - [ ] Deploy backend to VPS with Nginx
 - [ ] Deploy frontend (same VPS or static host)
-- [ ] Connect domain: `eftelingwachttijden.nl`
 
 ### 🎯 Phase 6: Future Improvements
 - [ ] Toggle and button components
