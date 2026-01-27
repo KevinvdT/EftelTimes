@@ -8,10 +8,10 @@ A fan-made project, not affiliated with the Efteling.
 ## Features
 
 - 🎢 Real-time queue times for all attractions
-- ⏱️ Single rider wait times
+- ⏱️ Single rider queue times
 - 🎪 Attraction status (open, closed, maintenance)
-- 🌐 Multi-language support
-- 🎨 Beautiful, theme-park inspired design
+- 🌐 Multi-language support \[planned\]
+- 🎨 Theme-park inspired design
 
 ## Project Structure
 
