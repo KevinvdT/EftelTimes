@@ -1,12 +1,16 @@
 import styled from 'styled-components';
 
 const Row = styled.div`
-  background-color: ${props => props.isEven ? '#E1D5C9' : 'transparent'};
+  background-color: ${props => props.isEvenDesktop ? '#E1D5C9' : 'transparent'};
   border-radius: 10px;
   padding: 1rem 1.25rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media (max-width: 1023px) {
+    background-color: ${props => props.isEvenMobile ? '#E1D5C9' : 'transparent'};
+  }
 `;
 
 const Name = styled.div`
@@ -57,7 +61,7 @@ const HiddenZero = styled.span`
   opacity: 0;
 `;
 
-const EntityRow = ({ name, waitTime, singleRider, status, isEven, isParkClosed }) => {
+const EntityRow = ({ name, waitTime, singleRider, status, isEvenDesktop, isEvenMobile, isParkClosed }) => {
   const hasNumericWaitTime = typeof waitTime === 'number';
 
   const formatTime = (time) => {
@@ -73,7 +77,7 @@ const EntityRow = ({ name, waitTime, singleRider, status, isEven, isParkClosed }
   };
 
   return (
-    <Row isEven={isEven}>
+    <Row isEvenDesktop={isEvenDesktop} isEvenMobile={isEvenMobile}>
       <Name>{name}</Name>
       <RightSection isParkClosed={isParkClosed}>
         {hasNumericWaitTime ? (

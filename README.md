@@ -3,7 +3,7 @@
 
 Queue times application for the Efteling theme park. Built with React and Django.
 
-A fan-made project, not affiliated with the Efteling.
+A fan-made project, not affiliated with Efteling.
 
 ## Features
 
@@ -29,6 +29,17 @@ A fan-made project, not affiliated with the Efteling.
 ```
 
 ## Development Setup
+
+### Run Frontend + Backend Together
+
+```bash
+npm install
+npm run dev
+```
+
+This runs both services from the project root:
+- Frontend: `http://localhost:5173`
+- Backend: `http://localhost:8000` (via `pipenv`)
 
 ### Frontend
 

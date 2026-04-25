@@ -109,7 +109,7 @@ const useOpeningStatus = (openingHoursData) => {
         message: (
           <>
             <span className="full-message">
-              Het park opent vandaag om <Emphasis>{formatTime(openTime)} tot {formatTime(closeTime)} uur</Emphasis>
+              Het park is nu <Emphasis>gesloten</Emphasis> en is vandaag open van {formatTime(openTime)} tot {formatTime(closeTime)} uur
             </span>
             <span className="compact-message">
               Park nu <Emphasis>gesloten</Emphasis>, vandaag open van {formatTime(openTime).replace(':00', '')} tot {formatTime(closeTime).replace(':00', 'u')}

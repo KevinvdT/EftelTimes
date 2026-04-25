@@ -100,7 +100,8 @@ const Table = ({ area, entities }) => {
               waitTime={entity.waitTime}
               singleRider={entity.singleRider}
               status={entity.status}
-              isEven={index % 2 === 0}
+              isEvenDesktop={index % 2 === 0}
+              isEvenMobile={index % 2 === 0}
               isParkClosed={isParkClosed}
             />
           ))}
@@ -121,7 +122,8 @@ const Table = ({ area, entities }) => {
               waitTime={entity.waitTime}
               singleRider={entity.singleRider}
               status={entity.status}
-              isEven={index % 2 === 0}
+              isEvenDesktop={index % 2 === 0}
+              isEvenMobile={(midPoint + index) % 2 === 0}
               isParkClosed={isParkClosed}
             />
           ))}
