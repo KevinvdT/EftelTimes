@@ -25,7 +25,8 @@ export const api = createApi({
           name: entity.name,
           waitTime: entity.waitTime,
           singleRider: entity.singleRider?.waitTime,
-          status: STATUS_MESSAGES[entity.status]
+          status: STATUS_MESSAGES[entity.status],
+          coordinates: entity.coordinates ?? null
         }));
       },
     }),

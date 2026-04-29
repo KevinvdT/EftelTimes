@@ -55,6 +55,7 @@ def transform_entity(data):
             "status": data["status"].lower(),
             "type": "attraction",
             "area": entity_info["area"],
+            "coordinates": entity_info.get("coordinates"),
             "externalId": external_id,
             "waitTime": None,
             "singleRider": {

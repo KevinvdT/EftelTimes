@@ -6,7 +6,7 @@ import { useState, useEffect } from 'react';
 
 const Title = styled.h1`
   text-align: left;
-  margin-bottom: 3rem;
+  margin-bottom: 1.5rem;
   font-family: 'Pirata One', cursive;
   font-size: 2.5rem;
   font-weight: 400;

@@ -1166,6 +1166,49 @@ ENTITY_INFO = {
     }
 }
 
+COORDINATES_BY_EXTERNAL_ID = {
+    "aquanura": {"lat": 51.648014, "lng": 5.045388},
+    "archipel": {"lat": 51.65137019, "lng": 5.05215668},
+    "baron1898": {"lat": 51.64827, "lng": 5.050988},
+    "carnavalfestival": {"lat": 51.652302, "lng": 5.052267},
+    "carrouselsantonpieckplein": {"lat": 51.652733, "lng": 5.049869},
+    "dansemacabre": {"lat": 51.64877141, "lng": 5.04868665},
+    "devliegendehollander": {"lat": 51.64772376, "lng": 5.05216503},
+    "diorama": {"lat": 51.650894, "lng": 5.048583},
+    "doudetuffer": {"lat": 51.648869, "lng": 5.053921},
+    "droomvlucht": {"lat": 51.65266, "lng": 5.046748},
+    "eftelingmuseum": {"lat": 51.652092, "lng": 5.049548},
+    "eftelingtheater": {"lat": 51.64826453, "lng": 5.04334527},
+    "fabula": {"lat": 51.64909661, "lng": 5.0470334},
+    "fatamorgana": {"lat": 51.647053, "lng": 5.045715},
+    "gondoletta": {"lat": 51.650581, "lng": 5.051335},
+    "halvemaen": {"lat": 51.64864, "lng": 5.05309},
+    "jorisendedraak": {"lat": 51.646866, "lng": 5.052788},
+    "kinderspoor": {"lat": 51.649727, "lng": 5.053526},
+    "kindervreugd": {"lat": 51.653088, "lng": 5.047781},
+    "kleuterhof": {"lat": 51.651745, "lng": 5.053839},
+    "maxmoritz": {"lat": 51.647963, "lng": 5.047662},
+    "pagode": {"lat": 51.650455, "lng": 5.050758},
+    "pirana": {"lat": 51.64708508, "lng": 5.04899471},
+    "python": {"lat": 51.647575, "lng": 5.053534},
+    "sirocco": {"lat": 51.65167497, "lng": 5.05209528},
+    "speelbosnest": {"lat": 51.64790361, "lng": 5.05279806},
+    "sprookjesbos": {"lat": 51.651142, "lng": 5.048003},
+    "stoomcarrousel": {"lat": 51.651211, "lng": 5.048955},
+    "stoomtreinm": {"lat": 51.652279, "lng": 5.047405},
+    "stoomtreinr": {"lat": 51.647948, "lng": 5.054342},
+    "symbolica": {"lat": 51.649918, "lng": 5.049548},
+    "villavolta": {"lat": 51.653255, "lng": 5.047484},
+    "vogelrok": {"lat": 51.652187, "lng": 5.052811},
+    "volkvanlaaf": {"lat": 51.653275, "lng": 5.048892},
+    "volkvanlaafmonorail": {"lat": 51.652953, "lng": 5.048818},
+}
+
+for external_id, entity_info in ENTITY_INFO.items():
+    coordinates = COORDINATES_BY_EXTERNAL_ID.get(external_id)
+    if coordinates:
+        entity_info["coordinates"] = coordinates
+
 # List of entity IDs to exclude (these are non-queue entities)
 EXCLUDED_ENTITIES = [
     "diorama",  # Diorama
