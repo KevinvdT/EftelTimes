@@ -121,22 +121,44 @@ def transform_entity(data):
 
     return None
 
+def transform_attraction_simple(data):
+    """Transform an attraction into a minimal format with id, name, status, and waitTime."""
+    if data.get("entityType") != "ATTRACTION":
+        return None
+    if data.get("externalId") in EXCLUDED_ENTITIES:
+        return None
+
+    result = {
+        "id": data.get("externalId"),
+        "name": data["name"],
+        "status": data["status"].lower(),
+        "waitTime": None,
+    }
+
+    if "queue" in data:
+        standby = data["queue"].get("STANDBY")
+        if standby and standby.get("waitTime") is not None:
+            result["waitTime"] = standby["waitTime"]
+
+    return result
+
+def fetch_live_data():
+    """Fetch live park data from ThemeParks API or dummy file."""
+    if USE_DUMMY_DATA:
+        with open(DUMMY_DATA_PATH) as f:
+            data = json.load(f)
+        return data, "dummy"
+
+    response = requests.get(THEMEPARKS_API_URL)
+    response.raise_for_status()
+    return response.json(), "tpw-api"
+
 @api_view(['GET'])
 @cache_page(60) if not DEBUG else lambda x: x  # Cache for 60 seconds unless in debug mode
 def queue_times(request):
     """Fetch and return queue times from either ThemeParks API or dummy data."""
     try:
-        if USE_DUMMY_DATA:
-            # Load data from dummy file
-            with open(DUMMY_DATA_PATH) as f:
-                data = json.load(f)
-            source = "dummy"
-        else:
-            # Fetch data from ThemeParks API
-            response = requests.get(THEMEPARKS_API_URL)
-            response.raise_for_status()  # Raise an exception for bad status codes
-            data = response.json()
-            source = "tpw-api"
+        data, source = fetch_live_data()
 
         # Transform the data and group by type
         grouped_entities = {
@@ -163,6 +185,29 @@ def queue_times(request):
             "error": "Failed to fetch queue times",
             "detail": str(e)
         }, status=503)  # Service Unavailable
+
+@api_view(['GET'])
+@cache_page(60) if not DEBUG else lambda x: x
+def attraction_queue_times(request):
+    """Fetch and return a simplified list of attraction queue times."""
+    try:
+        data, _ = fetch_live_data()
+        last_updated = timezone.now().isoformat()
+
+        attractions = []
+        for item in data.get("liveData", []):
+            transformed = transform_attraction_simple(item)
+            if transformed is not None:
+                transformed["lastUpdated"] = last_updated
+                attractions.append(transformed)
+
+        return Response(attractions)
+
+    except (requests.RequestException, FileNotFoundError, json.JSONDecodeError) as e:
+        return Response({
+            "error": "Failed to fetch queue times",
+            "detail": str(e)
+        }, status=503)
 
 def cache_until_midnight(view_func):
     """Cache the view until midnight Amsterdam time."""

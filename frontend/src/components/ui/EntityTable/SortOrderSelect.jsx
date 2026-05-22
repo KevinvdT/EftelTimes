@@ -13,6 +13,7 @@ const Label = styled.span`
   color: #6C4839;
   font-size: 0.9rem;
   font-weight: 700;
+  font-family: ${props => props.theme.typography.fonts.body};
 `;
 
 const ButtonGroup = styled.div`
@@ -27,6 +28,7 @@ const SortButton = styled.button`
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
+  font-family: ${props => props.theme.typography.fonts.body};
   border: none;
   border-radius: 10px;
   padding: 0.45rem 0.75rem;

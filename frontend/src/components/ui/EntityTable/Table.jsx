@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from 'react';
 import styled from 'styled-components';
 import Row from './Row';
 import SortOrderSelect from './SortOrderSelect';
+import DebugPanel from './DebugPanel';
 import { useGetOpeningHoursQuery } from '../../../store/api';
 
 const Section = styled.section`
@@ -268,6 +269,12 @@ const Table = ({ area, entities }) => {
           ))}
         </Column>
       </GridLayout>
+      <DebugPanel
+        location={userLocation}
+        sortOrder={sortOrder}
+        isOutsidePark={isOutsidePark}
+        locationAttempted={locationAttempted}
+      />
     </Section>
   );
 };
